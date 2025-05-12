@@ -4,10 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Livraria</title>
-    <link rel="stylesheet" href="style.css">k
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <header class="header">
+        <h1>Livraria</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="livros.html">Entrar</a></li>
+                <li><a href="autores.html">Registrar-se</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+        <section class="livros-destaque">
+            <div class="carrossel">
+                <div class="livro">
+                    <img src="imagens/harrypoter.webp" alt="Livro 1">
+                    <h3>Título do Livro 1</h3>
+                    <p>Descrição do Livro 1.</p>
+                </div>
+                <div class="livro">
+                    <img src="livro2.jpg" alt="Livro 2">
+                    <h3>Título do Livro 2</h3>
+                    <p>Descrição do Livro 2.</p>
+                </div>
+                <div class="livro">
+                    <img src="livro3.jpg" alt="Livro 3">
+                    <h3>Título do Livro 3</h3>
+                    <p>Descrição do Livro 3.</p>
+                </div>
+            </div>
+            <button class="prev"></button>
+            <button class="next"></button>
+        </section>
+        <!-- Nav bar --> 
+        <section class="categorias navbar">
+            <h1>Categorias</h1>
+            <nav>
+                <ul>
+                    <li><a href="#ficcao">Ficção</a></li>
+                    <li><a href="#romance">Romance</a></li>
+                    <li><a href="#aventura">Aventura</a></li>
+                </ul>
+            </nav>
+        </section>
+        
+        <section class="geral">
+            <h2>Confira Nossos Livros</h2>
+            <div class="livroexibicao">
+                <div class="imgexibicao">
+                    <img src="imagens/harrypoter.webp" alt="Livro 4" class="imgexibicao">
+                </div>
+                <div class="info">
+                    <h3>Título do Livro 4</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, inventore suscipit quam incidunt ea sed laboriosam soluta culpa veritatis nobis ab? Maxime nam dignissimos consequuntur aliquid praesentium dolorem ad consequatur.</p>
+                    <hr>
+                    <h3>adfgdasfgsdfg</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, inventore suscipit quam incidunt ea sed laboriosam soluta culpa veritatis nobis ab? Maxime nam dignissimos consequuntur aliquid praesentium dolorem ad consequatur.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Fazer seção de interesses -->
+    </main>
+    <footer class="footer">
+        <p>&copy; 2023 Livraria. Todos os direitos reservados.</p>
+    </footer>
+
 </body>
 <script src="script.js"></script>
 </html>

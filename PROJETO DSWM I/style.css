@@ -1,0 +1,183 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    background-color: #815837;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+.header ul{
+    list-style: none;
+    padding: 15px 10px 0px 10px;
+}
+.header ul li{
+    display: inline;
+    /*padding: 5px;*/
+    margin: 0 10px;
+    /*border-right: black 2px solid;*/
+}
+.header ul li a{
+    color: white;
+    text-decoration: none;
+}
+.header ul li a:hover{
+    color: black
+}
+
+.livros-destaque {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.carrossel div img {
+    width: auto;
+    height: 300px;
+}
+.carrossel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.livro {
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.livro img {
+    max-width: 100%;
+    height: auto;
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button.prev:hover, button.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+footer {
+    position: fixed; /* Fixa o rodapé na parte inferior da tela */
+    bottom: 0; /* Alinha o rodapé na parte inferior */
+    width: 100%; /* Largura total */
+    text-align: center; /* Centraliza o texto do rodapé */
+    font-style: italic; /* Estilo itálico */
+    padding: 10px 0; /* Espaçamento interno */
+    background: rgb(0, 0, 0); /* Fundo mais escuro */
+    color: white; /* Texto claro */
+    
+}
+
+section h1{
+    text-align: center;
+}
+
+
+.categorias.navbar {
+    background-color: #1e5372;
+    padding: 10px 0;
+    text-align: center;
+    color:white;
+    border-radius: 15px;
+}
+
+.categorias.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.categorias.navbar ul li {
+    display: inline;
+}
+
+.categorias.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.categorias.navbar ul li a:hover {
+    background-color: #0f2a3a;
+    color: #fff;
+}
+
+.categorias.navbar h1{
+    padding: 0px 0px 15px 0px;
+}
+
+.livroexibicao {
+    display: flex; /* Troca para flexbox */
+    align-items: flex-start; /* Alinha os itens ao topo */
+    gap: 20px; /* Espaçamento entre a imagem e os textos */
+    margin: 20px 0;
+}
+
+.imgexibicao {
+    flex: 1; /* A imagem ocupa 1 parte do espaço disponível */
+    max-width: 300px; /* Limita a largura máxima da imagem */
+}
+
+.imgexibicao img {
+    width: 100%; /* A imagem ocupa toda a largura do contêiner */
+    height: auto;
+    border-radius: 10px;
+}
+
+.info {
+    flex: 2; /* Os textos ocupam 2 partes do espaço disponível */
+    display: flex;
+    flex-direction: column; /* Empilha os textos verticalmente */
+    justify-content: flex-start; /* Alinha os textos ao topo */
+    text-align: left; /* Alinha o texto à esquerda */
+    gap: 10px; /* Adiciona espaçamento entre os textos */
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.info h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #333;
+}
+
+.info p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+}
+
+.info h3{
+    text-align: center;
+    padding: 10px 0px 0px 0px;
+}
