@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Livraria</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="imagens/iconelivro.webp" type="image/x-icon">
 </head>
+
 <body>
     <header class="header">
         <h1>Livraria</h1>
@@ -24,24 +28,22 @@
             <div class="carrossel">
                 <div class="livro">
                     <img src="imagens/harrypoter.webp" alt="Livro 1">
-                    <h3>Título do Livro 1</h3>
-                    <p>Descrição do Livro 1.</p>
                 </div>
                 <div class="livro">
                     <img src="livro2.jpg" alt="Livro 2">
-                    <h3>Título do Livro 2</h3>
-                    <p>Descrição do Livro 2.</p>
                 </div>
                 <div class="livro">
                     <img src="livro3.jpg" alt="Livro 3">
-                    <h3>Título do Livro 3</h3>
-                    <p>Descrição do Livro 3.</p>
                 </div>
             </div>
-            <button class="prev"></button>
-            <button class="next"></button>
+            <button class="prev">
+                <img src="imagens/setacarrosselesquerda.png" alt="Seta Esquerda">
+            </button>
+            <button class="next">
+                <img src="imagens/setacarrosseldireita.webp" alt="Seta Direita">
+            </button>
         </section>
-        <!-- Nav bar --> 
+        <!-- Nav bar -->
         <section class="categorias navbar">
             <h1>Categorias</h1>
             <nav>
@@ -49,33 +51,156 @@
                     <li><a href="#ficcao">Ficção</a></li>
                     <li><a href="#romance">Romance</a></li>
                     <li><a href="#aventura">Aventura</a></li>
+                    <li><a href="#fantasia">Fantasia</a></li>
+                    <li><a href="#suspense">Suspense</a></li>
+                    <li><a href="#historico">Terror</a></li>
                 </ul>
             </nav>
         </section>
-        
+
         <section class="geral">
-            <h2>Confira Nossos Livros</h2>
+            <h2 id="tituloPrincipal">Confira Nossos Principais Livros</h2>
             <div class="livroexibicao">
                 <div class="imgexibicao">
                     <img src="imagens/harrypoter.webp" alt="Livro 4" class="imgexibicao">
                 </div>
                 <div class="info">
-                    <h3>Título do Livro 4</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, inventore suscipit quam incidunt ea sed laboriosam soluta culpa veritatis nobis ab? Maxime nam dignissimos consequuntur aliquid praesentium dolorem ad consequatur.</p>
+                    <h3>Harry Potter e o Prisioneiro de Azkaban</h3>
+                    <p>Harry Potter e o Prisioneiro de Azkaban acompanha Harry em seu terceiro ano em Hogwarts, enquanto
+                        lida com a fuga de Sirius Black, um prisioneiro supostamente perigoso. Mistérios sobre o passado
+                        de seu pai e segredos envolvendo magia e amizade fazem deste livro um dos mais surpreendentes da
+                        série!
+                    </p>
                     <hr>
-                    <h3>adfgdasfgsdfg</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, inventore suscipit quam incidunt ea sed laboriosam soluta culpa veritatis nobis ab? Maxime nam dignissimos consequuntur aliquid praesentium dolorem ad consequatur.</p>
+                    <h3>Informações Autorais</h3>
+                    <p>- <strong>Autora</strong>: J.K. Rowling <br>
+                        - <strong>Gênero</strong>: Fantasia, aventura<br>
+                        - <strong>Publicado em</strong>: 1999 (Reino Unido), 2000 (Brasil)<br>
+                        - <strong>Editora</strong>: Bloomsbury (Reino Unido), Rocco (Brasil)<br>
+                        - <strong>Série</strong>: Harry Potter (terceiro livro)
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="geral">
+            <div class="livroexibicao">
+                <div class="info">
+                    <h3>O Pequeno Príncipe</h3>
+                    <p>O Pequeno Príncipe é um clássico da literatura escrito por Antoine de Saint-Exupéry. A história
+                        acompanha um piloto que sofre uma pane no deserto do Saara e encontra um menino misterioso, o
+                        Pequeno Príncipe, que veio de um pequeno planeta chamado B-612. Durante sua jornada, o príncipe
+                        visita diferentes mundos e aprende lições sobre amizade, amor e a essência da vida.
+                    </p>
+                    <hr>
+                    <h3>Informações Autorais</h3>
+                    <p>- <strong>Autor</strong>: Antoine de Saint-Exupéry <br>
+                        - <strong>Gênero</strong>: Fábula, literatura infantojuvenil<br>
+                        - <strong>Publicado em</strong>: 1943<br>
+                        -<strong> Editora</strong>: Éditions Gallimard (França), Editora Agir (Brasil)
+
+                    </p>
+                </div>
+                <div class="imgexibicao">
+                    <img src="imagens/opqnprincipe.png" alt="Livro 4" class="imgexibicao">
+                </div>
+            </div>
+        </section>
+        <section class="geral">
+            <div class="livroexibicao">
+                <div class="imgexibicao">
+                    <img src="imagens/eassimquecomeca.png" alt="Livro 4" class="imgexibicao">
+                </div>
+                <div class="info">
+                    <h3>É Assim que Começa</h3>
+                    <p>É Assim Que Começa, de Colleen Hoover, continua a história de Lily Bloom após o fim de seu
+                        relacionamento abusivo. Agora mãe solteira, ela tenta reconstruir sua vida enquanto lida com a
+                        presença de seu ex-marido, Ryle. O reencontro com Atlas Corrigan, seu primeiro amor, traz novas
+                        esperanças e desafios, explorando temas de recomeço, superação e amor.
+
+                    </p>
+                    <hr>
+                    <h3>Informações Autorais</h3>
+                    <p>- <strong>Autora</strong>: Colleen Hoover <br>
+                        - <strong>Gênero</strong>: Romance, drama <br>
+                        - <strong>Publicado em</strong>: 2022 <br>
+                        - <strong>Editora</strong>: Galera Record (Brasil)
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="geral">
+            <div class="livroexibicao">
+                <div class="info">
+                    <h3>It - A Coisa</h3>
+                    <p>It - A Coisa, de Stephen King, narra a luta de um grupo de amigos contra a entidade maligna
+                        Pennywise, que aterroriza a cidade de Derry. Alternando entre infância e vida adulta, a história
+                        combina terror sobrenatural com temas como medo, amizade e amadurecimento.
+                    </p>
+                    <hr>
+                    <h3>Informações Autorais</h3>
+                    <p>- <strong>Autor</strong>: Stephen King <br>
+                        - <strong>Gênero</strong>: Terror, suspense <br>
+                        - <strong>Publicado em</strong>: Setembro de 1986 <br>
+                        - <strong>Editora</strong>: Viking Press (EUA), Editora Objetiva (Brasil)
+
+                    </p>
+                </div>
+                <div class="imgexibicao">
+                    <img src="imagens/livroit.png" alt="Livro 4" class="imgexibicao">
+                </div>
+            </div>
+        </section>
+        <section class="geral">
+            <div class="livroexibicao">
+                <div class="imgexibicao">
+                    <img src="imagens/narnia.png" alt="Livro 4" class="imgexibicao">
+                </div>
+                <div class="info">
+                    <h3>As Crônicas de Nárnia</h3>
+                    <p>As Crônicas de Nárnia, de C.S. Lewis, é uma série de sete livros de fantasia publicada entre 1950
+                        e 1956. As histórias se passam no mundo mágico de Nárnia, onde crianças humanas vivem aventuras
+                        ao lado de criaturas fantásticas e enfrentam desafios épicos. O primeiro e mais famoso livro, O
+                        Leão, a Feiticeira e o Guarda-Roupa, apresenta os irmãos Pevensie, que descobrem Nárnia e lutam
+                        contra a Feiticeira Branca com a ajuda do poderoso leão Aslam.
+                    </p>
+                    <hr>
+                    <h3>Informações Autorais</h3>
+                    <p>- <strong>Autor</strong>: C.S. Lewis <br>
+                        - <strong>Gênero</strong>: Fantasia, aventura <br>
+                        - <strong>Publicado entre</strong>: 1950 - 1956 <br>
+                        - <strong>Editora</strong>: HarperCollins (Reino Unido), Martins Fontes (Brasil) <br>
+                    </p>
                 </div>
             </div>
         </section>
 
-
         <!-- Fazer seção de interesses -->
+        <br>
+        <section class="final">
+            <div class="final-content">
+                <h2>Obrigado por visitar nossa livraria!</h2>
+                <p>
+                    Esperamos que você tenha encontrado o livro perfeito para sua próxima aventura literária.
+                    Não se esqueça de nos seguir nas redes sociais para ficar por dentro das novidades, promoções e
+                    lançamentos.
+                </p>
+                <p>
+                    Caso tenha dúvidas ou sugestões, entre em contato conosco pelo e-mail
+                    <a href="mailto:contato@livraria.com">contato@livraria.com</a>.
+                    Estamos sempre à disposição para ajudar!
+                </p>
+            </div>
+        </section>
+
     </main>
+    <br>
+    <br>
+
     <footer class="footer">
         <p>&copy; 2023 Livraria. Todos os direitos reservados.</p>
     </footer>
 
 </body>
 <script src="script.js"></script>
+
 </html>
