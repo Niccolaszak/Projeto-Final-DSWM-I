@@ -218,6 +218,7 @@ section h1 {
 .categorias.navbar {
     background-color: #1e5372;
     padding: 10px 0;
+    margin: 0px 20px;
     text-align: center;
     color: white;
     border-radius: 15px;
@@ -323,7 +324,7 @@ section h1 {
     color: white;
     text-align: center;
     padding: 40px 20px;
-    margin-top: 20px;
+    margin: 0px 20px;
     border-radius: 40px;
 }
 
