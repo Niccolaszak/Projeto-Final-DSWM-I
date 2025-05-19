@@ -185,7 +185,12 @@ button.next {
     color: #fff;
     margin: 20px 0;
 }
-
+.geral {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0px 10px 0px 10px;
+}
 footer {
     /* Fixa o rodapé na parte inferior da tela */
     bottom: 0;
@@ -348,7 +353,7 @@ section h1 {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 40px 60px; /* Espaço entre linhas e colunas */
+        gap: 0px 20px; /* Espaço entre linhas e colunas */
     }
     .geral .livroexibicao {
         flex: 0 0 45%; /* Cada livro ocupa cerca de metade da largura */
