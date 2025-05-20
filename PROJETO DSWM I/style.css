@@ -266,7 +266,7 @@ section h1 {
     gap: 20px;
     /* Espaçamento entre a imagem e os textos */
     margin: 20px 0;
-}
+
 
 .imgexibicao {
     flex: 1;
@@ -292,7 +292,7 @@ section h1 {
     display: flex;
     flex-direction: column;
     /* Empilha os textos verticalmente */
-    justify-content: flex-start;
+    justify-content: center;
     /* Alinha os textos ao topo */
     text-align: left;
     /* Alinha o texto à esquerda */
@@ -303,6 +303,12 @@ section h1 {
     border: 2px solid #000000;
     border-radius: 10px;
     box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.5);
+    overflow: auto;       /* adiciona barra de rolagem se o texto for muito grande */
+    min-height: 480px;    /* altura mínima igual para todos */
+    height: 480px;        /* altura fixa, se preferir */
+    box-sizing: border-box;
+    background: #fff;
+}
 }
 
 .info h3 {
