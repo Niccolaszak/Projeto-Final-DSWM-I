@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livraria</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="imagens/iconelivro.webp" type="image/x-icon">
+</head>
+
+<body>
+    <header class="header">
+        <h1>Livraria</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="livros.html">Entrar</a></li>
+                <li><a href="autores.html">Registrar-se</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="venda-container">
+            <div class="venda-img">
+                <img id="venda-img" src="" alt="Produto" />
+                <p class="venda-img-info" id="venda-img-info"></p>
+            </div>
+            <div class="venda-info">
+                <h2 class="venda-titulo" id="venda-titulo"></h2>
+                <p class="venda-autor" id="venda-autor"></p>
+                <p class="venda-preco" id="venda-preco"></p>
+                <p class="venda-descricao" id="venda-descricao"></p>
+                <button class="botao-comprar">Comprar agora</button>
+            </div>
+        </section>
+    </main>
+    <footer class="footer" style="position: fixed; bottom: 0; width: 100%;">
+        <p>&copy; 2023 Livraria. Todos os direitos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
