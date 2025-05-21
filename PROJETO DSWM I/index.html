@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Livraria</title>
+    <title>Estante Mágica</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="imagens/iconelivro.webp" type="image/x-icon">
@@ -12,15 +12,13 @@
 
 <body>
     <header class="header">
-        <h1>Livraria</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="livros.html">Entrar</a></li>
-                <li><a href="autores.html">Registrar-se</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-            </ul>
-        </nav>
+        <img src="imagens/logo2.png" alt="" id="logo">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="livros.html">Catálogo</a></li>
+            <li id="carrinhoicon"><a href="carrinho.html"><img src="imagens/iconcarrinho.png" alt=""></a></li>
+        </ul>
+
     </header>
     <main>
 
@@ -57,9 +55,9 @@
                 </ul>
             </nav>
         </section>
-    <h2 class = "tituloprincipal">Confira Nossos Principais Livros</h2>
+        <h2 class="tituloprincipal">Confira Nossos Principais Livros</h2>
         <section class="geral">
-            
+
             <div class="livroexibicao">
                 <div class="imgexibicao">
                     <img src="imagens/harrypoter.webp" alt="Livro 4" class="imgexibicao">
@@ -81,8 +79,8 @@
                     </p>
                 </div>
             </div>
-        
-        
+
+
             <div class="livroexibicao">
                 <div class="info">
                     <h3>O Pequeno Príncipe</h3>
@@ -104,7 +102,7 @@
                     <img src="imagens/opqnprincipe.png" alt="Livro 4" class="imgexibicao">
                 </div>
             </div>
-        
+
             <div class="livroexibicao">
                 <div class="imgexibicao">
                     <img src="imagens/eassimquecomeca.png" alt="Livro 4" class="imgexibicao">
@@ -126,11 +124,15 @@
                     </p>
                 </div>
             </div>
-        
+
             <div class="livroexibicao">
                 <div class="info">
                     <h3>It - A Coisa</h3>
-                    <p>It - A Coisa, obra-prima de Stephen King, tece uma narrativa intrincada e aterrorizante que mergulha nas profundezas do medo e da amizade. A história acompanha a jornada de um grupo de amigos, o Clube dos Perdedores, que se une para combater a indescritível e malevolente entidade conhecida como Pennywise. Essa criatura, que se alimenta do medo, assola a pacata cidade de Derry, no Maine, em ciclos de horror.
+                    <p>It - A Coisa, obra-prima de Stephen King, tece uma narrativa intrincada e aterrorizante que
+                        mergulha nas profundezas do medo e da amizade. A história acompanha a jornada de um grupo de
+                        amigos, o Clube dos Perdedores, que se une para combater a indescritível e malevolente entidade
+                        conhecida como Pennywise. Essa criatura, que se alimenta do medo, assola a pacata cidade de
+                        Derry, no Maine, em ciclos de horror.
                     </p>
                     <hr>
                     <h3>Informações Autorais</h3>
@@ -145,7 +147,7 @@
                     <img src="imagens/livroit.png" alt="Livro 4" class="imgexibicao">
                 </div>
             </div>
-        
+
             <div class="livroexibicao">
                 <div class="imgexibicao">
                     <img src="imagens/narnia.png" alt="Livro 4" class="imgexibicao">
@@ -168,7 +170,7 @@
                 </div>
             </div>
         </section>
-        
+
         <a href="indexProduto.html" class="botaoVerMais">Ver mais</a>
 
         <!-- Fazer seção de interesses -->
@@ -192,9 +194,29 @@
     </main>
     <br>
     <br>
-
     <footer class="footer">
-        <p>&copy; 2023 Livraria. Todos os direitos reservados.</p>
+        <div class="footer-section">
+            <h2 class="tituloRodape">SOBRE</h2>
+            <div class="linksRodape">
+                <a href="">Quem somos</a>
+                <a href="">Eventos</a>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h2 class="tituloRodape">ATENDIMENTO AO CLIENTE</h2>
+            <div class="linksRodape">
+                <a href="">Entre em contato</a>
+                <a href="">Perguntas e Respostas</a>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h2 class="tituloRodape">REDES SOCIAIS</h2>
+            <div class="linksRodape redes-sociais">
+                <a href=""><img src="imagens/iconfacebook.png" alt=""></a>
+                <a href=""><img src="imagens/iconinsta.png" alt=""></a>
+                <a href=""><img src="imagens/iconX.png" alt=""></a>
+            </div>
+        </div>
     </footer>
 
 </body>

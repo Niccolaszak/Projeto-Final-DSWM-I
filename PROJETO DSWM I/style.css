@@ -84,25 +84,65 @@ main {
 .header {
     background-color: #1e5372;
     color: white;
-    padding: 10px;
+    padding: 0;
     text-align: center;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
+    height: 100px;
+    display: flex;
+    align-items: center;
+
+
+}
+
+#logo {
+    width: 350px;
+    height: auto;
+    display: block;
+    margin-bottom: -20px;
+    margin: 20px 0px 0px 20px;
+
+
+
 }
 
 .header ul {
     list-style: none;
-    padding: 15px 10px 0px 10px;
+    padding: 15px 10px 20px 10px;
 }
 
 .header ul li {
     display: inline;
-    /*padding: 5px;*/
     margin: 0 10px;
-    /*border-right: black 2px solid;*/
     padding: 10px;
+
+}
+
+.header-container {
+    display: inline-flex;
+    margin-left: auto;
+
+
+
+}
+
+#carrinhoicon {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#carrinhoicon img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin-bottom: 5px;
+}
+
+#carrinhoicon a:hover {
+    background-color: #0f2a3a;
+    border-radius: 100%;
 }
 
 .header ul li a {
@@ -160,8 +200,10 @@ button.next {
     cursor: pointer;
     z-index: 10;
     /* Remove qualquer restrição de altura */
-    height: 60px; /* Ajuste conforme o tamanho da seta */
-    width: 40px;  /* Ajuste conforme o tamanho da seta */
+    height: 60px;
+    /* Ajuste conforme o tamanho da seta */
+    width: 40px;
+    /* Ajuste conforme o tamanho da seta */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -169,17 +211,20 @@ button.next {
 
 button.prev img,
 button.next img {
-    width: 30px;  /* Ajuste o tamanho da seta conforme necessário */
+    width: 30px;
+    /* Ajuste o tamanho da seta conforme necessário */
     height: auto;
     display: block;
 }
 
 button.prev {
-    left: 0; /* Cola na lateral esquerda */
+    left: 0;
+    /* Cola na lateral esquerda */
 }
 
 button.next {
-    right: 0; /* Cola na lateral direita */
+    right: 0;
+    /* Cola na lateral direita */
 }
 
 .tituloprincipal {
@@ -188,12 +233,14 @@ button.next {
     color: #fff;
     margin: 20px 0;
 }
+
 .geral {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 0px 10px 0px 10px;
 }
+
 footer {
     /* Fixa o rodapé na parte inferior da tela */
     bottom: 0;
@@ -210,7 +257,7 @@ footer {
     /* Fundo mais escuro */
     color: white;
     /* Texto claro */
-    
+
 }
 
 section h1 {
@@ -268,47 +315,50 @@ section h1 {
     margin: 20px 0;
 
 
-.imgexibicao {
-    flex: 1;
-    /* A imagem ocupa 1 parte do espaço disponível */
-    max-width: 300px;
-    /* Limita a largura máxima da imagem */
-}
+    .imgexibicao {
+        flex: 1;
+        /* A imagem ocupa 1 parte do espaço disponível */
+        max-width: 300px;
+        /* Limita a largura máxima da imagem */
+    }
 
-.imgexibicao img {
-    width: 250px;
-    /* Define uma largura fixa */
-    height: 380px;
-    /* Define uma altura fixa */
-    object-fit: cover;
-    /* Garante que a imagem se ajuste ao contêiner sem distorção */
-    border-radius: 10px;
-    /* Mantém as bordas arredondadas */
-}
+    .imgexibicao img {
+        width: 250px;
+        /* Define uma largura fixa */
+        height: 380px;
+        /* Define uma altura fixa */
+        object-fit: cover;
+        /* Garante que a imagem se ajuste ao contêiner sem distorção */
+        border-radius: 10px;
+        /* Mantém as bordas arredondadas */
+    }
 
-.info {
-    flex: 2;
-    /* Os textos ocupam 2 partes do espaço disponível */
-    display: flex;
-    flex-direction: column;
-    /* Empilha os textos verticalmente */
-    justify-content: center;
-    /* Alinha os textos ao topo */
-    text-align: left;
-    /* Alinha o texto à esquerda */
-    gap: 10px;
-    /* Adiciona espaçamento entre os textos */
-    padding: 5px;
-    background-color: #ffffff;
-    border: 2px solid #000000;
-    border-radius: 10px;
-    box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.5);
-    overflow: auto;       /* adiciona barra de rolagem se o texto for muito grande */
-    min-height: 480px;    /* altura mínima igual para todos */
-    height: 480px;        /* altura fixa, se preferir */
-    box-sizing: border-box;
-    background: #fff;
-}
+    .info {
+        flex: 2;
+        /* Os textos ocupam 2 partes do espaço disponível */
+        display: flex;
+        flex-direction: column;
+        /* Empilha os textos verticalmente */
+        justify-content: center;
+        /* Alinha os textos ao topo */
+        text-align: left;
+        /* Alinha o texto à esquerda */
+        gap: 10px;
+        /* Adiciona espaçamento entre os textos */
+        padding: 5px;
+        background-color: #ffffff;
+        border: 2px solid #000000;
+        border-radius: 10px;
+        box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.5);
+        overflow: auto;
+        /* adiciona barra de rolagem se o texto for muito grande */
+        min-height: 480px;
+        /* altura mínima igual para todos */
+        height: 480px;
+        /* altura fixa, se preferir */
+        box-sizing: border-box;
+        background: #fff;
+    }
 }
 
 .info h3 {
@@ -363,48 +413,58 @@ section h1 {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 0px 20px; /* Espaço entre linhas e colunas */
+        gap: 0px 20px;
+        /* Espaço entre linhas e colunas */
     }
+
     .geral .livroexibicao {
-        flex: 0 0 45%; /* Cada livro ocupa cerca de metade da largura */
+        flex: 0 0 45%;
+        /* Cada livro ocupa cerca de metade da largura */
         max-width: 45%;
         min-width: 350px;
         box-sizing: border-box;
     }
-    
+
 }
 
 @media (max-width: 750px) {
     .geral {
         display: block;
     }
+
     .livroexibicao {
         flex-direction: column;
         align-items: center;
         gap: 10px;
     }
+
     .imgexibicao {
         max-width: 100%;
         width: 100%;
         display: flex;
         justify-content: center;
     }
+
     .imgexibicao img {
         width: 90vw;
         max-width: 350px;
         height: auto;
     }
+
     .info {
         width: 100%;
         box-sizing: border-box;
     }
+
     .livroexibicao .imgexibicao {
         order: 1;
     }
+
     .livroexibicao .info {
         order: 2;
     }
 }
+
 @media (max-width: 750px) {
     .categorias.navbar ul {
         display: flex;
@@ -413,18 +473,26 @@ section h1 {
         gap: 0px 0;
         padding: 0px;
     }
+
     .categorias.navbar ul li {
-        flex: 0 0 33.33%; /* Cada item ocupa metade da largura */
+        flex: 0 0 33.33%;
+        /* Cada item ocupa metade da largura */
         display: flex;
-        justify-content: center; /* Centraliza horizontalmente */
-        align-items: center;     /* Centraliza verticalmente */
-        margin-bottom: 0px; /* Espaçamento entre os itens */
-        text-align: center;      /* Centraliza o texto */
+        justify-content: center;
+        /* Centraliza horizontalmente */
+        align-items: center;
+        /* Centraliza verticalmente */
+        margin-bottom: 0px;
+        /* Espaçamento entre os itens */
+        text-align: center;
+        /* Centraliza o texto */
     }
 }
+
 @media (max-width: 350px) {
     .categorias.navbar ul li {
-        flex: 0 0 50%; /* Cada item ocupa metade da largura */
+        flex: 0 0 50%;
+        /* Cada item ocupa metade da largura */
     }
 }
 
@@ -501,7 +569,8 @@ section h1 {
     font-size: 20px;
     font-weight: bold;
     color: #e63946;
-    margin-top: auto; /* Empurra o preço para o final da div */
+    margin-top: auto;
+    /* Empurra o preço para o final da div */
     margin-bottom: 0;
     align-self: flex-start;
     width: 100%;
@@ -518,108 +587,11 @@ section h1 {
     max-width: 300px;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
     text-decoration: none;
 }
+
 .botaoVerMais:hover {
     background-color: #0f2a3a;
     color: #fff;
-}
-
-.venda-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-    max-width: 900px;
-    margin: 115px auto 70px auto;
-    padding: 40px 30px;
-    align-items: flex-start;
-}
-
-.venda-img {
-    flex: 1 1 280px;
-    display: flex;
-    flex-direction: column; /* Adicione esta linha */
-    justify-content: center;
-    align-items: center;
-    min-width: 220px;
-}
-
-.venda-img img {
-    width: 260px;
-    height: 340px;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
-    background: #f2efff;
-}
-
-.venda-info {
-    flex: 2 1 350px;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    min-width: 250px;
-}
-
-.venda-titulo {
-    font-size: 2em;
-    margin: 0 0 8px 0;
-    color: #1e5372;
-}
-
-.venda-autor {
-    font-size: 1.1em;
-    color: #555;
-    margin-bottom: 8px;
-}
-
-.venda-preco {
-    font-size: 2em;
-    color: #e63946;
-    font-weight: bold;
-    margin-bottom: 8px;
-}
-
-.venda-descricao {
-    font-size: 1.1em;
-    color: #444;
-    margin-bottom: 12px;
-}
-
-.botao-comprar:hover {
-    background: #0f2a3a;
-}
-
-.venda-parcela,
-.venda-frete {
-    font-size: 1em;
-    color: #1e5372;
-    margin: 0;
-}
-
-.venda-img-info {
-    margin-top: 12px;
-    font-size: 1em;
-    color: #0a0a0a;
-    text-align: left;
-    background: #f7f7fa;
-    border-radius: 6px;
-    padding: 6px 10px;
-}
-
-@media (max-width: 700px) {
-    .venda-container {
-        flex-direction: column;
-        align-items: center;
-        padding: 20px 5vw;
-    }
-    .venda-img img {
-        width: 80vw;
-        height: auto;
-        max-width: 320px;
-    }
 }
