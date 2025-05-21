@@ -142,7 +142,7 @@ main {
 
 #carrinhoicon a:hover {
     background-color: #0f2a3a;
-    border-radius: 100%;
+    border-radius: 100px;
 }
 
 .header ul li a {
