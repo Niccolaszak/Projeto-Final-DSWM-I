@@ -111,7 +111,7 @@ const livros = {
     },
     11: {
         "imagem": "imagens/alicecomfundo.png",
-        "informacoes": "- <strong>Autor</strong>: Nita Prose <br> - <strong>Gênero</strong>: Fantasia, Literatura Infantil, Absurdo <br> - <strong>Publicado em</strong>: 1865/1871 <br> - <strong>Editora</strong>:   Intrínseca, Zahar, Companhia das Letras, Editora Arqueiro, DarkSide Books",
+        "informacoes": "- <strong>Autor</strong>: Lewis Carroll <br> - <strong>Gênero</strong>: Fantasia, Literatura Infantil, Absurdo <br> - <strong>Publicado em</strong>: 1865/1871 <br> - <strong>Editora</strong>:   Intrínseca, Zahar, Companhia das Letras, Editora Arqueiro, DarkSide Books",
         "titulo": "Alice: Alice no País das Maravilhas e Alice Através do Espelho",
         "autor": " Lewis Carroll (pseudônimo de Charles Lutwidge Dodgson)",
         "valor": "R$ 39,90",
