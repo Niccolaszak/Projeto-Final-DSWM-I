@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-const livros = {
+window.livros = {
     1: {
         "imagem": "imagens/harrypoterfundoquadrado.png",
         "informacoes": "- <strong>Autora</strong>: J.K. Rowling <br>- <strong>Gênero</strong>: Fantasia, aventura<br>- <strong>Publicado em</strong>: 1999 (Reino Unido), 2000 (Brasil)<br>- <strong>Editora</strong>: Bloomsbury (Reino Unido), Rocco (Brasil)<br>- <strong>Série</strong>: Harry Potter (terceiro livro - ilustrado)",
@@ -313,5 +313,18 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('venda-preco').textContent = livro.valor;
             document.getElementById('venda-descricao').textContent = livro.descricao;
         }
+    }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const addBtn = document.querySelector('.botao-add');
+    if (addBtn) {
+        addBtn.addEventListener('click', () => {
+            const id = getLivroIdFromUrl();
+            let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+            carrinho.push(id);
+            localStorage.setItem('carrinho', JSON.stringify(carrinho));
+            alert('Produto adicionado ao carrinho!');
+        });
     }
 });

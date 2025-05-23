@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livraria</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="imagens/iconelivro.webp" type="image/x-icon">
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html"><img src="imagens/logo2.png" alt="" id="logo"></a>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="livros.html">Catálogo</a></li>
+            <li id="carrinhoicon"><a href="carrinho.html"><img src="imagens/iconcarrinho.png" alt=""></a></li>
+        </ul>
+
+    </header>
+    <main>
+        <section class="carrinho-container">
+            <h2 class="carrinho-titulo">Seu Carrinho</h2>
+            <ul id="lista-carrinho"></ul>
+            <div id="carrinho-total"></div>
+            <div id="carrinho-vazio">Seu carrinho está vazio.</div>
+            <button id="finalizar-venda">Finalizar Venda</button>
+        </section>
+    </main>
+    <script src="script.js"></script>
+    <script>
+        const livros = window.livros || {};
+
+        function getCarrinho() {
+            return JSON.parse(localStorage.getItem('carrinho')) || [];
+        }
+
+        function setCarrinho(carrinho) {
+            localStorage.setItem('carrinho', JSON.stringify(carrinho));
+        }
+
+        function agruparCarrinho(carrinho) {
+            return carrinho.reduce((acc, id) => {
+                acc[id] = (acc[id] || 0) + 1;
+                return acc;
+            }, {});
+        }
+
+        function renderCarrinho() {
+            const carrinho = getCarrinho();
+            const lista = document.getElementById('lista-carrinho');
+            const totalDiv = document.getElementById('carrinho-total');
+            const vazioDiv = document.getElementById('carrinho-vazio');
+            const finalizarBtn = document.getElementById('finalizar-venda');
+            lista.innerHTML = '';
+            let total = 0;
+            if (carrinho.length === 0) {
+                vazioDiv.style.display = 'block';
+                totalDiv.textContent = '';
+                finalizarBtn.style.display = 'none';
+                return;
+            }
+            vazioDiv.style.display = 'none';
+            finalizarBtn.style.display = 'block';
+
+            const agrupado = agruparCarrinho(carrinho);
+            Object.keys(agrupado).forEach(id => {
+                const livro = livros[id];
+                if (!livro) return;
+                const quantidade = agrupado[id];
+                const preco = Number(livro.valor.replace(/[^\d,]/g, '').replace(',', '.'));
+                total += preco * quantidade;
+                const li = document.createElement('li');
+                li.innerHTML = `
+            <img src="${livro.imagem}" alt="${livro.titulo}">
+            <span style="flex:1;">${livro.titulo}</span>
+            <span class="carrinho-quantidade">
+                <button onclick="alterarQuantidade('${id}', -1)">-</button>
+                <span>${quantidade}</span>
+                <button onclick="alterarQuantidade('${id}', 1)">+</button>
+            </span>
+            <span style="color:#e63946;font-weight:bold;">${livro.valor}</span>
+            <button class="carrinho-remover" onclick="removerTodosDoCarrinho('${id}')">Remover</button>
+        `;
+                li.className = '';
+                li.style.display = 'flex';
+                li.style.alignItems = 'center';
+                li.style.gap = '20px';
+                li.style.marginBottom = '18px';
+                lista.appendChild(li);
+            });
+            totalDiv.textContent = 'Total: R$ ' + total.toFixed(2).replace('.', ',');
+        }
+
+        function alterarQuantidade(id, delta) {
+            let carrinho = getCarrinho();
+            if (delta === 1) {
+                carrinho.push(id);
+            } else if (delta === -1) {
+                const idx = carrinho.indexOf(id);
+                if (idx !== -1) carrinho.splice(idx, 1);
+            }
+            setCarrinho(carrinho);
+            renderCarrinho();
+        }
+
+        function removerTodosDoCarrinho(id) {
+            let carrinho = getCarrinho();
+            carrinho = carrinho.filter(item => item !== id);
+            setCarrinho(carrinho);
+            renderCarrinho();
+        }
+
+        window.alterarQuantidade = alterarQuantidade;
+        window.removerTodosDoCarrinho = removerTodosDoCarrinho;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderCarrinho();
+            document.getElementById('finalizar-venda').onclick = () => {
+                if (getCarrinho().length === 0) return;
+                alert('Compra finalizada com sucesso! Obrigado pela preferência.');
+                setCarrinho([]);
+                renderCarrinho();
+            };
+        });
+    </script>
+    <footer class="footer">
+        <div class="footer-section">
+            <h2 class="tituloRodape">SOBRE</h2>
+            <div class="linksRodape">
+                <a href="">Quem somos</a>
+                <a href="">Eventos</a>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h2 class="tituloRodape">ATENDIMENTO AO CLIENTE</h2>
+            <div class="linksRodape">
+                <a href="">Entre em contato</a>
+                <a href="">Perguntas e Respostas</a>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h2 class="tituloRodape">REDES SOCIAIS</h2>
+            <div class="linksRodape redes-sociais">
+                <a href=""><img src="imagens/iconfacebook.png" alt=""></a>
+                <a href=""><img src="imagens/iconinsta.png" alt=""></a>
+                <a href=""><img src="imagens/iconX.png" alt=""></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
