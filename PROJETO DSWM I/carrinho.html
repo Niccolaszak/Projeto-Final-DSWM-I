@@ -120,9 +120,7 @@
             renderCarrinho();
             document.getElementById('finalizar-venda').onclick = () => {
                 if (getCarrinho().length === 0) return;
-                alert('Compra finalizada com sucesso! Obrigado pela preferência.');
-                setCarrinho([]);
-                renderCarrinho();
+                window.location.href = "finalizarcompra.html";
             };
         });
     </script>

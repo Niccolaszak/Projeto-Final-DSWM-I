@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livraria</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="imagens/iconelivro.webp" type="image/x-icon">
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html"><img src="imagens/logo2.png" alt="" id="logo"></a>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="livros.html">Catálogo</a></li>
+            <li id="carrinhoicon"><a href="carrinho.html"><img src="imagens/iconcarrinho.png" alt=""></a></li>
+        </ul>
+
+    </header>
+    <main>
+        <section class="carrinho-container">
+            <h2 class="carrinho-titulo">Finalizar Compra</h2>
+            <ul id="resumo-carrinho"></ul>
+            <div id="resumo-total"></div>
+            <form id="pagamento-form">
+                <label for="forma-pagamento" class="pagamento-label">Forma de pagamento:</label>
+                <select id="forma-pagamento" required class="pagamento-select">
+                    <option value="">Selecione</option>
+                    <option value="cartao">Cartão de Crédito</option>
+                    <option value="boleto">Boleto Bancário</option>
+                    <option value="pix">PIX</option>
+                </select>
+                <button type="submit" id="btn-pagar" class="btn-pagar">Realizar Pagamento</button>
+            </form>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-section">
+            <h2 class="tituloRodape">SOBRE</h2>
+            <div class="linksRodape">
+                <a href="">Quem somos</a>
+                <a href="">Eventos</a>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h2 class="tituloRodape">ATENDIMENTO AO CLIENTE</h2>
+            <div class="linksRodape">
+                <a href="">Entre em contato</a>
+                <a href="">Perguntas e Respostas</a>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h2 class="tituloRodape">REDES SOCIAIS</h2>
+            <div class="linksRodape redes-sociais">
+                <a href=""><img src="imagens/iconfacebook.png" alt=""></a>
+                <a href=""><img src="imagens/iconinsta.png" alt=""></a>
+                <a href=""><img src="imagens/iconX.png" alt=""></a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+    const livros = window.livros || {};
+
+    function getCarrinho() {
+        return JSON.parse(localStorage.getItem('carrinho')) || [];
+    }
+
+    function setCarrinho(carrinho) {
+        localStorage.setItem('carrinho', JSON.stringify(carrinho));
+    }
+
+    function agruparCarrinho(carrinho) {
+        return carrinho.reduce((acc, id) => {
+            acc[id] = (acc[id] || 0) + 1;
+            return acc;
+        }, {});
+    }
+
+    function renderResumoCarrinho() {
+        const carrinho = getCarrinho();
+        const lista = document.getElementById('resumo-carrinho');
+        const totalDiv = document.getElementById('resumo-total');
+        lista.innerHTML = '';
+        let total = 0;
+        if (carrinho.length === 0) {
+            lista.innerHTML = '<li>Seu carrinho está vazio.</li>';
+            totalDiv.textContent = '';
+            document.getElementById('pagamento-form').style.display = 'none';
+            return;
+        }
+        const agrupado = agruparCarrinho(carrinho);
+        Object.keys(agrupado).forEach(id => {
+            const livro = livros[id];
+            if (!livro) return;
+            const quantidade = agrupado[id];
+            const preco = Number(livro.valor.replace(/[^\d,]/g, '').replace(',', '.'));
+            total += preco * quantidade;
+            const li = document.createElement('li');
+            li.className = 'resumo-item';
+            li.innerHTML = `
+                <img src="${livro.imagem}" alt="${livro.titulo}" class="resumo-img">
+                <span class="resumo-titulo">${livro.titulo}</span>
+                <span class="resumo-qtd">Qtd: <b>${quantidade}</b></span>
+                <span class="resumo-valor">Valor: <b>R$ ${(preco * quantidade).toFixed(2).replace('.', ',')}</b></span>
+            `;
+            lista.appendChild(li);
+        });
+        totalDiv.textContent = 'Total: R$ ' + total.toFixed(2).replace('.', ',');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        renderResumoCarrinho();
+        document.getElementById('pagamento-form').onsubmit = function(e) {
+            e.preventDefault();
+            const forma = document.getElementById('forma-pagamento').value;
+            if (!forma) {
+                alert('Selecione a forma de pagamento!');
+                return;
+            }
+            setCarrinho([]);
+            alert('Compra realizada com sucesso! Obrigado pela preferência.');
+            window.location.href = "index.html";
+        };
+    });
+    </script>
+</body>
+
+</html>
