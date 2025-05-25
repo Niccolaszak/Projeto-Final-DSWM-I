@@ -174,7 +174,10 @@ header {
 }
 
 .livros-destaque {
-    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
     max-width: 65vw;
     max-height: 60vw;
@@ -194,7 +197,7 @@ header {
 .carrossel {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    padding: 100px 0px 0px 0px;
+    padding: 10px 20px 0px 0px;
     min-width: 600px;
 }
 
@@ -214,7 +217,6 @@ header {
 
 button.prev,
 button.next {
-    position: absolute;
     top: 50%;
     transform: translateY(-50%);
     background: none;
@@ -818,13 +820,14 @@ section h1 {
     .footer-section {
         min-width: unset;
     }
+    
 }
 
 .titulocategorias {
     text-align: center;
     font-size: 2em;
     color: #fff;
-    margin: 120px 0px 0px 0px;
+    margin: 10px 0px 0px 0px;
 }
 
 .gradecategorias {
@@ -1023,9 +1026,9 @@ section h1 {
     background: #163d53;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
     .carrossel {
-        padding: 10vw 0 0 0;
+        padding: 0 0 0 0;
         min-width: 0;
         min-height: 0;
     }
@@ -1042,6 +1045,9 @@ section h1 {
     .livro {
         padding: 0 5vw;
     }
+
+    
+    
 }
 
 @media (max-width: 800px) {
@@ -1050,6 +1056,12 @@ section h1 {
         padding: 5px 0;
         flex-direction: column;
     }
+    .titulocategorias {
+    text-align: center;
+    font-size: 2em;
+    color: #fff;
+    margin: 80px 0px 0px 0px;
+}
 
     #logo {
         margin: 10px auto 0 auto;
@@ -1064,64 +1076,74 @@ section h1 {
 
     main {
         margin-top: 180px;
-        /* ajuste conforme o tamanho do header aberto */
+        
     }
 
     .livros-destaque {
-        margin-top: 60px;
-        /* ajuste conforme necessário para mobile */
-    }
-}
-
-@media (max-width: 600px) {
-    .livros-destaque {
+        width: 100vw;
         max-width: 100vw;
-        margin: 0;
+        margin-top: 60px;
         padding: 0;
     }
 
     .carrossel {
-        display: flex;
-        overflow-x: auto;
-        gap: 0;
-        padding: 0;
-        min-width: 0;
         width: 100vw;
+        max-width: 100vw;
+        min-width: 0;
+        gap: 0;
     }
 
-    .carrossel .livro {
-        flex: 0 0 100vw;
-        scroll-snap-align: center;
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-    }
 
-    .carrossel .livro img {
-        width: 100vw !important;
-        max-width: 100vw !important;
-        height: auto !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        display: block;
-        box-sizing: border-box;
-        border-radius: 0 !important;
-    }
-
-    /* Remove as setas do carrossel no mobile */
     button.prev,
     button.next {
         display: none;
     }
+}
 
+@media (min-width: 801px) {
     main {
-        margin-top: 230px;
+        margin-top: 120px;
+        /* altura do header em desktop */
+    }
+}
+
+@media (max-width: 600px) {
+    .carrinho-container {
+        padding: 10px 2vw;
+        max-width: 100vw;
+        border-radius: 0;
     }
 
-    @media (min-width: 801px) {
-        main {
-            margin-top: 120px;
-            /* altura do header em desktop */
-        }
+    #lista-carrinho li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding-bottom: 18px;
+    }
+
+    #lista-carrinho img {
+        width: 90vw;
+        max-width: 180px;
+        height: auto;
+        margin-bottom: 8px;
+    }
+
+    #lista-carrinho span {
+        font-size: 1em;
+    }
+
+    .carrinho-quantidade {
+        gap: 10px;
+        margin-bottom: 8px;
+    }
+
+    .carrinho-remover {
+        margin-left: 0;
+        margin-top: 8px;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        padding: 10px 0;
+        font-size: 1em;
     }
 }
