@@ -32,7 +32,6 @@ h2,
 h3 {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    /* Para títulos mais destacados */
 }
 
 p,
@@ -40,7 +39,6 @@ li,
 a {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    /* Para textos normais */
 }
 
 
@@ -183,7 +181,6 @@ header {
     max-height: 60vw;
     margin: 0 auto;
     padding-bottom: 15px;
-    /* Garante que o carrossel seja o contexto das setas */
 }
 
 
@@ -226,9 +223,7 @@ button.next {
     z-index: 10;
     /* Remove qualquer restrição de altura */
     height: 60px;
-    /* Ajuste conforme o tamanho da seta */
     width: 40px;
-    /* Ajuste conforme o tamanho da seta */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -237,7 +232,6 @@ button.next {
 button.prev img,
 button.next img {
     width: 30px;
-    /* Ajuste o tamanho da seta conforme necessário */
     height: auto;
     display: block;
 }
@@ -382,7 +376,7 @@ section h1 {
         min-height: 480px;
         /* altura mínima igual para todos */
         height: 480px;
-        /* altura fixa, se preferir */
+        /* altura fixa */
         box-sizing: border-box;
         background: #fff;
     }
@@ -539,11 +533,9 @@ section h1 {
 
 .produtoExib {
     flex: 0 1 23%;
-    /* Aproximadamente 4 por linha, considerando o gap */
     max-width: 250px;
     min-height: 420px;
     max-height: 420px;
-    /* Altura fixa para todos os cards */
     background-color: #fff;
     display: flex;
     flex-direction: column;
@@ -598,7 +590,6 @@ section h1 {
     font-weight: bold;
     color: #e63946;
     margin-top: auto;
-    /* Empurra o preço para o final da div */
     margin-bottom: 0;
     align-self: flex-start;
     width: 100%;
@@ -643,7 +634,6 @@ section h1 {
     flex: 1 1 280px;
     display: flex;
     flex-direction: column;
-    /* Adicione esta linha */
     justify-content: center;
     align-items: center;
     min-width: 220px;
