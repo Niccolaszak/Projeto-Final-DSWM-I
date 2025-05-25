@@ -4,8 +4,11 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     height: 100%;
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 body {
@@ -128,6 +131,11 @@ main {
 
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
 .header-container {
     display: inline-flex;
     margin-left: auto;
@@ -168,28 +176,35 @@ main {
 .livros-destaque {
     position: relative;
     overflow: hidden;
-    width: 100%;
-    max-width: 800px;
+    max-width: 65vw;
+    max-height: 60vw;
     margin: 0 auto;
     padding-bottom: 15px;
     /* Garante que o carrossel seja o contexto das setas */
 }
 
+
 .carrossel div img {
-    width: auto;
-    height: 300px;
+    min-width: 600px;
+    height: auto;
+    border-radius: 20px;
+
 }
 
 .carrossel {
     display: flex;
     transition: transform 0.5s ease-in-out;
     padding: 100px 0px 0px 0px;
+    min-width: 600px;
 }
+
 
 .livro {
     min-width: 100%;
     box-sizing: border-box;
     text-align: center;
+    padding: 0 50px;
+    /* Espaço lateral para as setas */
 }
 
 .livro img {
@@ -266,7 +281,7 @@ footer {
     /* Fundo mais escuro */
     color: white;
     /* Texto claro */
-    
+
 
 }
 
@@ -606,13 +621,14 @@ section h1 {
     background-color: #0f2a3a;
     color: #fff;
 }
+
 .venda-container {
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
     background: #fff;
     border-radius: 16px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
     max-width: 900px;
     margin: 115px auto 70px auto;
     padding: 40px 30px;
@@ -624,7 +640,8 @@ section h1 {
 .venda-img {
     flex: 1 1 280px;
     display: flex;
-    flex-direction: column; /* Adicione esta linha */
+    flex-direction: column;
+    /* Adicione esta linha */
     justify-content: center;
     align-items: center;
     min-width: 220px;
@@ -635,7 +652,7 @@ section h1 {
     height: 340px;
     object-fit: cover;
     border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
     background: #f2efff;
 }
 
@@ -672,7 +689,7 @@ section h1 {
     margin-bottom: 12px;
 }
 
-.botao-add{
+.botao-add {
     display: block;
     background-color: #1e5372;
     color: white;
@@ -714,12 +731,14 @@ section h1 {
         align-items: center;
         padding: 20px 5vw;
     }
+
     .venda-img img {
         width: 80vw;
         height: auto;
         max-width: 320px;
     }
 }
+
 .footer {
     background-color: #f7f4f4;
     color: #fff;
@@ -825,7 +844,7 @@ section h1 {
     background: #fff;
     padding: 30px 20px;
     border-radius: 16px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
     display: flex;
     flex-direction: column;
 }
@@ -1002,4 +1021,107 @@ section h1 {
 
 .btn-pagar:hover {
     background: #163d53;
+}
+
+@media (max-width: 900px) {
+    .carrossel {
+        padding: 10vw 0 0 0;
+        min-width: 0;
+        min-height: 0;
+    }
+
+    .carrossel div img,
+    .livro img {
+        width: 100%;
+        max-width: 100%;
+        min-width: 100%;
+        height: auto;
+        border-radius: 12px;
+    }
+
+    .livro {
+        padding: 0 5vw;
+    }
+}
+
+@media (max-width: 800px) {
+    .header {
+        height: auto;
+        padding: 5px 0;
+        flex-direction: column;
+    }
+
+    #logo {
+        margin: 10px auto 0 auto;
+        width: 60vw;
+        max-width: 220px;
+    }
+
+    .header ul {
+        padding: 10px 0 10px 0;
+
+    }
+
+    main {
+        margin-top: 180px;
+        /* ajuste conforme o tamanho do header aberto */
+    }
+
+    .livros-destaque {
+        margin-top: 60px;
+        /* ajuste conforme necessário para mobile */
+    }
+}
+
+@media (max-width: 600px) {
+    .livros-destaque {
+        max-width: 100vw;
+        margin: 0;
+        padding: 0;
+    }
+
+    .carrossel {
+        display: flex;
+        overflow-x: auto;
+        gap: 0;
+        padding: 0;
+        min-width: 0;
+        width: 100vw;
+    }
+
+    .carrossel .livro {
+        flex: 0 0 100vw;
+        scroll-snap-align: center;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .carrossel .livro img {
+        width: 100vw !important;
+        max-width: 100vw !important;
+        height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block;
+        box-sizing: border-box;
+        border-radius: 0 !important;
+    }
+
+    /* Remove as setas do carrossel no mobile */
+    button.prev,
+    button.next {
+        display: none;
+    }
+
+    main {
+        margin-top: 230px;
+    }
+
+    @media (min-width: 801px) {
+        main {
+            margin-top: 120px;
+            /* altura do header em desktop */
+        }
+    }
 }

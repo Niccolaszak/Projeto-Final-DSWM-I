@@ -1,32 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const carrossel = document.querySelector('.carrossel');
-    const livros = document.querySelectorAll('.livro');
-    const prevButton = document.querySelector('.prev');
-    const nextButton = document.querySelector('.next');
-    let currentIndex = 0;
-
-    function updateCarrossel() {
-        const offset = -currentIndex * 100;
-        carrossel.style.transform = `translateX(${offset}%)`;
-    }
-
-    prevButton.addEventListener('click', () => {
-        currentIndex = (currentIndex > 0) ? currentIndex - 1 : livros.length - 1;
-        updateCarrossel();
-    });
-
-    nextButton.addEventListener('click', () => {
-        currentIndex = (currentIndex < livros.length - 1) ? currentIndex + 1 : 0;
-        updateCarrossel();
-    });
-
-    // Alterna automaticamente os itens do carrossel a cada 15 segundos
-    setInterval(() => {
-        currentIndex = (currentIndex < livros.length - 1) ? currentIndex + 1 : 0;
-        updateCarrossel();
-    }, 15000); // 15000ms = 15 segundos
-});
-
 
 window.livros = {
     1: {
@@ -93,7 +64,7 @@ window.livros = {
         "valor": "R$32,89",
         "descricao": "Molly Gray é uma camareira de hotel que adora seu trabalho e se apega rigidamente a regras e rotinas, muitas vezes mal interpretando sinais sociais. Sua vida vira de cabeça para baixo quando ela encontra um hóspede rico, o Sr. Black, morto em seu quarto. Molly se torna a principal suspeita e precisa usar sua observação única e sua própria lógica para desvendar o mistério e provar sua inocência, contando com a ajuda inesperada de alguns colegas."
     },
-        9: {
+    9: {
         "imagem": "imagens/aculpadasestrelascomfundo.png",
         "informacoes": "- <strong>Autor</strong>: John Green <br> - <strong>Gênero</strong>: Romance Jovem Adulto, Drama <br> - <strong>Publicado em</strong>: 2012 <br> - <strong>Editora</strong>:  Intrínseca",
         "titulo": "A Culpa das Estrelas",
@@ -148,7 +119,7 @@ window.livros = {
         "autor": "Bram Stoker",
         "valor": "R$ 61,99",
         "descricao": "O romance gótico narra a tentativa do Conde Drácula, um vampiro da Transilvânia, de se mudar para a Inglaterra e espalhar o mal, e a luta de um grupo de pessoas, lideradas pelo Professor Van Helsing, para detê-lo."
-        },
+    },
     16: {
         "imagem": "imagens/dunacomfundo.png",
         "informacoes": "- <strong>Autor</strong>: Frank Herbert <br> - <strong>Gênero</strong>: Romance, Ficção Científica <br> - <strong>Publicado em</strong>: 1965 <br> - <strong>Editora</strong>: Aleph",
@@ -327,4 +298,60 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Produto adicionado ao carrinho!');
         });
     }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const carrossel = document.querySelector('.carrossel');
+    const slides = document.querySelectorAll('.carrossel .livro');
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
+    let currentIndex = 0;
+    const totalSlides = slides.length;
+
+    function updateCarrossel() {
+        // Garante que currentIndex nunca passe dos limites
+        if (currentIndex < 0) currentIndex = totalSlides - 1;
+        if (currentIndex >= totalSlides) currentIndex = 0;
+        const offset = -currentIndex * 100;
+        carrossel.style.transform = `translateX(${offset}%)`;
+    }
+
+    if (prevButton) {
+        prevButton.addEventListener('click', () => {
+            currentIndex--;
+            updateCarrossel();
+        });
+    }
+
+    if (nextButton) {
+        nextButton.addEventListener('click', () => {
+            currentIndex++;
+            updateCarrossel();
+        });
+    }
+
+    setInterval(() => {
+        currentIndex++;
+        updateCarrossel();
+    }, 15000);
+
+    // Swipe mobile
+    let startX = null;
+    carrossel.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+    });
+    carrossel.addEventListener('touchend', (e) => {
+        if (startX === null) return;
+        let endX = e.changedTouches[0].clientX;
+        let diff = startX - endX;
+        if (Math.abs(diff) > 50) {
+            if (diff > 0) {
+                currentIndex++;
+            } else {
+                currentIndex--;
+            }
+            updateCarrossel();
+        }
+        startX = null;
+    });
 });
