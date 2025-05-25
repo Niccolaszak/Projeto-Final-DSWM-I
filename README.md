@@ -39,7 +39,7 @@ Projeto-Final-DSWM-I/
 
 1. **Clone o repositório:**
    ```bash
-   git clone https://github.com/seu-usuario/Projeto-Final-DSWM-I.git
+   git clone https://github.com/Niccolaszak/Projeto-Final-DSWM-I.git
    ```
 2. **Abra a pasta no VS Code ou outro editor.**
 3. **Execute localmente:**
