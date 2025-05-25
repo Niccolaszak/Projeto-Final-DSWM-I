@@ -510,7 +510,7 @@ section h1 {
     }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 390px) {
     .categorias.navbar ul li {
         flex: 0 0 50%;
         /* Cada item ocupa metade da largura */
