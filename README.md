@@ -69,7 +69,7 @@ Projeto-Final-DSWM-I/
   Email: alissoneraldo02102@gmail.com<br>
   Github: @AlissonnSilva
 - <strong>Vinicius Gabriel Buskievicz</strong><br>
-  Email: vgameplays82@gmail.com<br>
+  Email: viniciusbuskievicz01@gmail.com<br>
   Github: @Vinicius Buskievicz
 Para a disciplina DSWM I.
 
