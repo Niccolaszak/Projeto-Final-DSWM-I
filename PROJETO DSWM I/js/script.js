@@ -1,289 +1,44 @@
+window.livros = {};
 
-window.livros = {
-    1: {
-        "imagem": "imagens/harrypoterfundoquadrado.png",
-        "informacoes": "- <strong>Autora</strong>: J.K. Rowling <br>- <strong>Gênero</strong>: Fantasia, aventura<br>- <strong>Publicado em</strong>: 1999 (Reino Unido), 2000 (Brasil)<br>- <strong>Editora</strong>: Bloomsbury (Reino Unido), Rocco (Brasil)<br>- <strong>Série</strong>: Harry Potter (terceiro livro - ilustrado)",
-        "titulo": "Harry Potter e o Prisioneiro de Azkaban - Edição Ilustrada",
-        "autor": "J.K. Rowling",
-        "valor": "R$196,76",
-        "descricao": "Harry Potter e o Prisioneiro de Azkaban acompanha Harry em seu terceiro ano em Hogwarts, enquanto lida com a fuga de Sirius Black, um prisioneiro supostamente perigoso. Mistérios sobre o passado de seu pai e segredos envolvendo magia e amizade fazem deste livro um dos mais surpreendentes da série!"
-    },
-    2: {
-        "imagem": "imagens/livroitfundoquadrado.png",
-        "informacoes": "- <strong>Autor</strong>: Stephen King <br>- <strong>Gênero</strong>: Terror, suspense <br>- <strong>Publicado em</strong>: Setembro de 1986 <br>- <strong>Editora</strong>: Viking Press (EUA), Editora Objetiva (Brasil)",
-        "titulo": "It - A Coisa",
-        "autor": "Stephen King",
-        "valor": "R$115,10",
-        "descricao": "It - A Coisa, obra-prima de Stephen King, tece uma narrativa intrincada e aterrorizante que mergulha nas profundezas do medo e da amizade. A história acompanha a jornada de um grupo de amigos, o Clube dos Perdedores, que se une para combater a indescritível e malevolente entidade conhecida como Pennywise. Essa criatura, que se alimenta do medo, assola a pacata cidade de Derry, no Maine, em ciclos de horror."
-    },
-    3: {
-        "imagem": "imagens/opqnprincipefundoquadrado.png",
-        "informacoes": "- <strong>Autor</strong>: Antoine de Saint-Exupéry <br> - <strong>Gênero</strong>: Fábula, literatura infantojuvenil<br> - <strong>Publicado em</strong>: 1943<br> -<strong> Editora</strong>: Éditions Gallimard (França), Editora Agir (Brasil)",
-        "titulo": "O Pequeno Príncipe",
-        "autor": "Antoine de Saint-Exupéry",
-        "valor": "R$19,90",
-        "descricao": "O Pequeno Príncipe é um clássico da literatura escrito por Antoine de Saint-Exupéry. A história acompanha um piloto que sofre uma pane no deserto do Saara e encontra um menino misterioso, o Pequeno Príncipe, que veio de um pequeno planeta chamado B-612. Durante sua jornada, o príncipe visita diferentes mundos e aprende lições sobre amizade, amor e a essência da vida."
-    },
-    4: {
-        "imagem": "imagens/eassimquecomecafundoquadrado.png",
-        "informacoes": "- <strong>Autora</strong>: Colleen Hoover <br> - <strong>Gênero</strong>: Romance, drama <br> - <strong>Publicado em</strong>: 2022 <br> - <strong>Editora</strong>: Galera Record (Brasil)",
-        "titulo": "E Assim Que Começa",
-        "autor": "Colleen Hoover",
-        "valor": "R$34,90",
-        "descricao": "É Assim Que Começa, de Colleen Hoover, continua a história de Lily Bloom após o fim de seu relacionamento abusivo. Agora mãe solteira, ela tenta reconstruir sua vida enquanto lida com a presença de seu ex-marido, Ryle. O reencontro com Atlas Corrigan, seu primeiro amor, traz novas esperanças e desafios, explorando temas de recomeço, superação e amor."
-    },
-    5: {
-        "imagem": "imagens/narniafundoquadrado.png",
-        "informacoes": "- <strong>Autor</strong>: C.S. Lewis <br> - <strong>Gênero</strong>: Fantasia, aventura <br> - <strong>Publicado entre</strong>: 1950 - 1956 <br> - <strong>Editora</strong>: HarperCollins (Reino Unido), Martins Fontes (Brasil)",
-        "titulo": "As Crônicas de Nárnia - Edição Ilustrada",
-        "autor": "C.S. Lewis",
-        "valor": "R$159,00",
-        "descricao": "As Crônicas de Nárnia, de C.S. Lewis, é uma série de sete livros de fantasia publicada entre 1950 e 1956. As histórias se passam no mundo mágico de Nárnia, onde crianças humanas vivem aventuras ao lado de criaturas fantásticas e enfrentam desafios épicos. O primeiro e mais famoso livro, O Leão, a Feiticeira e o Guarda-Roupa, apresenta os irmãos Pevensie, que descobrem Nárnia e lutam contra a Feiticeira Branca com a ajuda do poderoso leão Aslam."
-    },
-    6: {
-        "imagem": "imagens/50tonsdecinzacomfundo.png",
-        "informacoes": "- <strong>Autor</strong>: E. L. James <br> - <strong>Gênero</strong>: Romance erótico <br> - <strong>Publicado em</strong>: 2011 <br> - <strong>Editora</strong>:  Intrínseca",
-        "titulo": "50 Tons de Cinza",
-        "autor": "E. L. James",
-        "valor": "R$38,71",
-        "descricao": "A estudante Anastasia Steele se envolve com o misterioso e controlador empresário Christian Grey. O livro explora o intenso relacionamento BDSM entre eles, enquanto Ana descobre o mundo de Christian e eles lidam com seus próprios desafios emocionais."
-    },
-    7: {
-        "imagem": "imagens/1984comfundo.png",
-        "informacoes": "- <strong>Autor</strong>: George Orwell <br> - <strong>Gênero</strong>: Distopia, Ficção Política <br> - <strong>Publicado em</strong>: 1949 <br> - <strong>Editora</strong>:  Companhia das Letras",
-        "titulo": "1984",
-        "autor": "George Orwell",
-        "valor": "R$22,23",
-        "descricao": "Em um futuro totalitário, Winston Smith vive sob o regime opressor do Grande Irmão e do Partido, que controla cada aspecto da vida, incluindo o pensamento. Ele secretamente anseia por liberdade e verdade, mas a constante vigilância e a manipulação da história tornam a rebelião quase impossível. O livro é uma crítica poderosa aos perigos do totalitarismo, da vigilância em massa e da propaganda."
-    },
-    8: {
-        "imagem": "imagens/acamareiracomfundo.png",
-        "informacoes": "- <strong>Autor</strong>: Nita Prose <br> - <strong>Gênero</strong>: Mistério, Ficção Contemporânea, Thriller Cômico <br> - <strong>Publicado em</strong>: 2022 <br> - <strong>Editora</strong>:  Intrínseca",
-        "titulo": "A Camareira",
-        "autor": "Nita Prose",
-        "valor": "R$32,89",
-        "descricao": "Molly Gray é uma camareira de hotel que adora seu trabalho e se apega rigidamente a regras e rotinas, muitas vezes mal interpretando sinais sociais. Sua vida vira de cabeça para baixo quando ela encontra um hóspede rico, o Sr. Black, morto em seu quarto. Molly se torna a principal suspeita e precisa usar sua observação única e sua própria lógica para desvendar o mistério e provar sua inocência, contando com a ajuda inesperada de alguns colegas."
-    },
-    9: {
-        "imagem": "imagens/aculpadasestrelascomfundo.png",
-        "informacoes": "- <strong>Autor</strong>: John Green <br> - <strong>Gênero</strong>: Romance Jovem Adulto, Drama <br> - <strong>Publicado em</strong>: 2012 <br> - <strong>Editora</strong>:  Intrínseca",
-        "titulo": "A Culpa das Estrelas",
-        "autor": "John Green",
-        "valor": "R$ 36,90",
-        "descricao": "Hazel Grace Lancaster, uma adolescente com câncer terminal, conhece Augustus Waters, um ex-jogador de basquete que perdeu uma perna devido à doença. Eles se apaixonam e embarcam em uma jornada que os leva a Amsterdã em busca do autor de seu livro favorito. O livro explora temas de amor, vida, morte e a busca por sentido em meio à dor, tudo com um toque de humor e sinceridade."
-    },
-    10: {
-        "imagem": "imagens/aempregadacomfundo.png",
-        "informacoes": "- <strong>Autor</strong>: Freida McFadden <br> - <strong>Gênero</strong>: Suspense psicológico, Thriller <br> - <strong>Publicado em</strong>: 2022 <br> - <strong>Editora</strong>:  Editora Arqueiro",
-        "titulo": "A Empregada",
-        "autor": "Freida McFadden",
-        "valor": "R$ 39,90",
-        "descricao": "Millie, uma mulher com um passado misterioso, consegue um emprego de empregada doméstica na casa dos Winchester. Ela logo descobre que a vida perfeita da família esconde segredos perturbadores, e a trama se desenrola com reviravoltas chocantes, revelando que Millie e seus empregadores estão mais conectados do que aparentam."
-    },
-    11: {
-        "imagem": "imagens/alicecomfundo.png",
-        "informacoes": "- <strong>Autor</strong>: Lewis Carroll <br> - <strong>Gênero</strong>: Fantasia, Literatura Infantil, Absurdo <br> - <strong>Publicado em</strong>: 1865/1871 <br> - <strong>Editora</strong>:   Intrínseca, Zahar, Companhia das Letras, Editora Arqueiro, DarkSide Books",
-        "titulo": "Alice: Alice no País das Maravilhas e Alice Através do Espelho",
-        "autor": " Lewis Carroll (pseudônimo de Charles Lutwidge Dodgson)",
-        "valor": "R$ 39,90",
-        "descricao": "Alice persegue um Coelho Branco e cai em um reino subversivo e ilógico, habitado por criaturas peculiares como o Chapeleiro Maluco e a Rainha de Copas, em uma jornada para voltar para casa. Alice atravessa um espelho e entra em um mundo onde tudo é invertido e segue as regras de um jogo de xadrez, encontrando personagens como a Rainha Vermelha e a Rainha Branca, em uma busca para se tornar uma rainha. Ambos os livros exploram temas de lógica, identidade e a natureza da realidade através de um humor nonsense e situações surreais."
-    },
-    12: {
-        "imagem": "imagens/aprofessoracomfundo.png",
-        "informacoes": "- <strong>Autor</strong>: Freida McFadden <br> - <strong>Gênero</strong>: Suspense psicológico, Thriller <br> - <strong>Publicado em</strong>: 2023 <br> - <strong>Editora</strong>: Editora Arqueiro",
-        "titulo": "A Professora",
-        "autor": "Freida McFadden",
-        "valor": "R$41,90",
-        "descricao": "Eve Brown, uma professora aparentemente comum, esconde segredos perturbadores. A trama se desenrola em um ambiente escolar, misturando dramas pessoais e crimes, onde nada é o que parece. O livro é um suspense cheio de reviravoltas e jogos psicológicos, questionando a verdadeira natureza de seus personagens e mantendo o leitor em constante dúvida sobre quem é a vítima e quem é o culpado."
-    },
-    13: {
-        "imagem": "imagens/comoeuera antesdevocecomfundo.png",
-        "informacoes": "- <strong>Autor</strong>: Jojo Moyes <br> - <strong>Gênero</strong>: Romance, Drama <br> - <strong>Publicado em</strong>: 2012 <br> - <strong>Editora</strong>: Intrínseca",
-        "titulo": "Como Eu Era Antes de Você",
-        "autor": "Jojo Moyes",
-        "valor": "R$36,90",
-        "descricao": "Louisa Clark é uma jovem comum que perde o emprego e acaba se tornando cuidadora de Will Traynor, um bem-sucedido banqueiro que ficou tetraplégico após um acidente. Apesar das diferenças, eles desenvolvem um vínculo profundo, e Lou tenta mostrar a Will que a vida ainda vale a pena ser vivida, mesmo diante das complexas escolhas que ele planeja fazer."
-    },
-    14: {
-        "imagem": "imagens/domquixotecomfundo.png",
-        "informacoes": "- <strong>Autor</strong>: Miguel de Cervantes <br> - <strong>Gênero</strong>: Romance, Paródia, Sátira <br> - <strong>Publicado em</strong>: 1605 <br> - <strong>Editora</strong>: Editora 34",
-        "titulo": "Dom Quixote",
-        "autor": "Miguel de Cervantes",
-        "valor": "R$179,90",
-        "descricao": "Dom Quixote, um fidalgo que perdeu a razão de tanto ler romances de cavalaria, decide se tornar um cavaleiro andante. Acompanhado por seu fiel escudeiro Sancho Pança, ele vive diversas aventuras, misturando realidade e fantasia, em uma crítica bem-humorada aos ideais de cavalaria."
-    },
-    15: {
-        "imagem": "imagens/draculacomfundo.png",
-        "informacoes": "- <strong>Autor</strong>: Bram Stoker <br> - <strong>Gênero</strong>: Ficção Gótica, Terror <br> - <strong>Publicado em</strong>: 1897 <br> - <strong>Editora</strong>: Várias (ex: Principis, DarkSide Books)",
-        "titulo": "Drácula",
-        "autor": "Bram Stoker",
-        "valor": "R$ 61,99",
-        "descricao": "O romance gótico narra a tentativa do Conde Drácula, um vampiro da Transilvânia, de se mudar para a Inglaterra e espalhar o mal, e a luta de um grupo de pessoas, lideradas pelo Professor Van Helsing, para detê-lo."
-    },
-    16: {
-        "imagem": "imagens/dunacomfundo.png",
-        "informacoes": "- <strong>Autor</strong>: Frank Herbert <br> - <strong>Gênero</strong>: Romance, Ficção Científica <br> - <strong>Publicado em</strong>: 1965 <br> - <strong>Editora</strong>: Aleph",
-        "titulo": "Duna",
-        "autor": "Frank Herbert",
-        "valor": "R$68,90",
-        "descricao": "Em um planeta árido conhecido como Duna, a especiaria 'melange' é a substância mais valiosa do universo, concedendo vida prolongada e habilidades psíquicas. A história segue a jornada de Paul Atreides, cuja família é designada para controlar Duna, e os conflitos que surgem em meio a intrigas políticas, ecologia e poder."
-    },
-    17: {
-        "imagem": "imagens/fahrenheitcomfundo.png",
-        "informacoes": "- <strong>Autor</strong>: Ray Bradbury <br> - <strong>Gênero</strong>: Ficção científica distópica <br> - <strong>Publicado em</strong>: 1953 <br> - <strong>Editora</strong>: Editora Arqueiro",
-        "titulo": "Fahrenheit 451",
-        "autor": "Ray Bradbury",
-        "valor": "R$35,90",
-        "descricao": "Em uma sociedade futura onde livros são proibidos e bombeiros os queimam, Guy Montag, um bombeiro, começa a questionar seu papel e a buscar conhecimento, arriscando tudo para preservar a literatura e a liberdade de pensamento."
-    },
-    18: {
-        "imagem": "imagens/frankensteincomfundo.png",
-        "informacoes": "- <strong>Autor</strong>: Mary Shelley <br> - <strong>Gênero</strong>: Ficção Gótica, Horror <br> - <strong>Publicado em</strong>: 1818 <br> - <strong>Editora</strong>: Várias (ex: Principis, DarkSide Books)",
-        "titulo": "Frankenstein",
-        "autor": "Mary Shelley",
-        "valor": "R$26,90",
-        "descricao": "O cientista Victor Frankenstein cria uma criatura monstruosa em um experimento. A história explora temas de ambição, isolamento, preconceito e as consequências da busca por conhecimento sem limites."
-    },
-    19: {
-        "imagem": "imagens/hobbitcomfundo.png",
-        "informacoes": "- <strong>Autor</strong>: J.R.R. Tolkien <br> - <strong>Gênero</strong>: Fantasia, Aventura <br> - <strong>Publicado em</strong>: 1937 <br> - <strong>Editora</strong>: Martins Fontes (no Brasil)",
-        "titulo": "O Hobbit",
-        "autor": "J.R.R. Tolkien",
-        "valor": "R$47,21",
-        "descricao": "Bilbo Bolseiro, um hobbit pacato, é convencido pelo mago Gandalf a se juntar a um grupo de anões em uma aventura para recuperar um tesouro guardado por um dragão. A jornada os leva por paisagens perigosas, repletas de criaturas mágicas e desafios, onde Bilbo encontra um anel mágico e descobre sua própria coragem."
-    },
-    20: {
-        "imagem": "imagens/ladykillerscomfundo.png",
-        "informacoes": "- <strong>Autor</strong>: Tori Telfer <br> - <strong>Gênero</strong>: Crimes Reais <br> - <strong>Publicado em</strong>: 2019 <br> - <strong>Editora</strong>: Darkside",
-        "titulo": "Lady Killers: Assassinas em Série",
-        "autor": "Tori Telfer",
-        "valor": "R$47,41",
-        "descricao": "Quando pensamos em assassinos em série, pensamos em homens. Mas as mulheres podem ser tão letais quanto os homens. Este livro recapitula a vida de catorze mulheres com apetite para destruição, suas atrocidades e o legado de dor deixado por cada uma delas."
-    },
-    21: {
-        "imagem": "imagens/mobydickcomfundo.png",
-        "informacoes": "- <strong>Autor</strong>: Herman Melville <br> - <strong>Gênero</strong>: Aventura, Romance, Alegoria <br> - <strong>Publicado em</strong>: 1851 <br> - <strong>Editora</strong>: Várias (ex: Penguin-Companhia, Martin Claret)",
-        "titulo": "Moby Dick",
-        "autor": "Herman Melville",
-        "valor": "R$38,90",
-        "descricao": "O capitão Ahab, do navio baleeiro Pequod, busca vingança contra Moby Dick, uma lendária baleia branca que o mutilou. A história é narrada por Ismael, um marinheiro a bordo, e explora temas como obsessão, fé, natureza e a condição humana."
-    },
-    22: {
-        "imagem": "imagens/mochileirocomfundo.png",
-        "informacoes": "- <strong>Autor</strong>: Douglas Adams <br> - <strong>Gênero</strong>: Ficção Científica, Comédia, Sátira <br> - <strong>Publicado em</strong>: 1979 <br> - <strong>Editora</strong>: Arqueiro",
-        "titulo": "O Guia do Mochileiro das Galáxias",
-        "autor": "Douglas Adams",
-        "valor": "R$41,18",
-        "descricao": "Arthur Dent é um homem comum que, momentos antes da destruição da Terra para a construção de uma via expressa intergaláctica, é salvo por seu amigo Ford Prefect, um alienígena disfarçado. Juntos, eles embarcam em uma hilária e absurda jornada pelo espaço, guiados pelo 'Guia do Mochileiro das Galáxias'."
-    },
-    23: {
-        "imagem": "imagens/mosqueteiroscomfundo.png",
-        "informacoes": "- <strong>Autor</strong>: Alexandre Dumas <br> - <strong>Gênero</strong>: Aventura, Romance Histórico <br> - <strong>Publicado em</strong>: 1844 <br> - <strong>Editora</strong>: Várias (ex: Zahar, Martin Claret)",
-        "titulo": "Os Três Mosqueteiros",
-        "autor": "Alexandre Dumas",
-        "valor": "R$19,95",
-        "descricao": "D'Artagnan, um jovem ambicioso, viaja a Paris para se juntar aos mosqueteiros do Rei Luís XIII. Ele logo se une aos lendários Athos, Porthos e Aramis. Juntos, eles se envolvem em intrigas políticas e aventuras perigosas, defendendo a honra da Rainha e a si mesmos contra o Cardeal Richelieu e seus agentes."
-    },
-    24: {
-        "imagem": "imagens/neuromancercomfundo.png",
-        "informacoes": "- <strong>Autor</strong>: William Gibson <br> - <strong>Gênero</strong>: Ficção Científica, Cyberpunk <br> - <strong>Publicado em</strong>: 1984 <br> - <strong>Editora</strong>: Aleph (no Brasil)",
-        "titulo": "Neuromancer",
-        "autor": "William Gibson",
-        "valor": "R$30,96",
-        "descricao": "Case, um hacker viciado e sem futuro, é contratado por uma figura misteriosa para uma última e perigosa missão. Ele é lançado em um submundo tecnológico e cibernético, onde inteligências artificiais poderosas e corporações globais disputam o controle da informação, explorando temas como realidade virtual, inteligência artificial e a relação entre homem e máquina."
-    },
-    25: {
-        "imagem": "imagens/noitedasbruxascomfundo.png",
-        "informacoes": "- <strong>Autor</strong>: Agatha Christie <br> - <strong>Gênero</strong>: Romance Policial <br> - <strong>Publicado em</strong>: 1969 <br> - <strong>Editora</strong>: L&PM",
-        "titulo": "A Noite das Bruxas",
-        "autor": "Agatha Christie",
-        "valor": "R$39,93",
-        "descricao": "Em uma festa de Halloween, a jovem Joyce se gaba de ter testemunhado um assassinato. Ninguém acredita nela, mas horas depois, ela é encontrada morta. Hercule Poirot é chamado para desvendar o mistério."
-    },
-    26: {
-        "imagem": "imagens/oexorcistacomfundo.png",
-        "informacoes": "- <strong>Autor</strong>: William Peter Blatty <br> - <strong>Gênero</strong>: Horror, Sobrenatural <br> - <strong>Publicado em</strong>: 1971 <br> - <strong>Editora</strong>: Várias (ex: HarperCollins)",
-        "titulo": "O Exorcista",
-        "autor": "William Peter Blatty",
-        "valor": "R$ 31,90",
-        "descricao": "Uma mãe desesperada busca ajuda para sua filha de 12 anos, que começa a exibir comportamentos estranhos e perturbadores. Acreditando que a menina está possuída, dois padres são chamados para realizar um exorcismo, enfrentando forças demoníacas aterrorizantes."
-    },
-    27: {
-        "imagem": "imagens/orgulhoepreconceitocomfundo.png",
-        "informacoes": "- <strong>Autor</strong>: Jane Austen <br> - <strong>Gênero</strong>: Romance, Romance de Costumes <br> - <strong>Publicado em</strong>: 1813 <br> - <strong>Editora</strong>: Várias (ex: Martin Claret, L&PM, Penguin-Companhia)",
-        "titulo": "Orgulho e Preconceito",
-        "autor": "Jane Austen",
-        "valor": "R$ 17,15",
-        "descricao": "A história de Elizabeth Bennet e Mr. Darcy, explorando temas como as convenções sociais, a busca por casamento na Inglaterra do século XIX, orgulho, preconceito e a superação das primeiras impressões para encontrar o verdadeiro amor."
-    },
-    28: {
-        "imagem": "imagens/passadosombriocomfundo.png",
-        "informacoes": "- <strong>Autor</strong>: Peter Straub <br> - <strong>Gênero</strong>: Horror, Suspense <br> - <strong>Publicado em</strong>: Desconhecido <br> - <strong>Editora</strong>: Bertrand Brasil",
-        "titulo": "Um Passado Sombrio",
-        "autor": "Peter Straub",
-        "valor": "R$ 51,63",
-        "descricao": "Um Passado Sombrio de Peter Straub narra a história de quatro amigos que, na infância, fazem um pacto que evoca uma entidade sobrenatural, concedendo poderes sombrios a Chip. Anos depois, os eventos trágicos e as consequências desse ritual assombram suas vidas adultas. A esposa de Spencer, Patsy, tenta desvendar a verdade por trás dos acontecimentos, revelando segredos perturbadores sobre o pacto e a natureza do mal que os persegue. O livro explora temas de memória, culpa e as repercussões de atos imprudentes."
-    },
-    29: {
-        "imagem": "imagens/percyjacksoncomfundo.png",
-        "informacoes": "- <strong>Autor</strong>: Rick Riordan <br> - <strong>Gênero</strong>: Fantasia, Mitologia Grega, Jovem Adulto <br> - <strong>Publicado em</strong>: 2005 <br> - <strong>Editora</strong>: Intrínseca (no Brasil)",
-        "titulo": "Percy Jackson e os Olimpianos: O Ladrão de Raios",
-        "autor": "Rick Riordan",
-        "valor": "R$ 45,13",
-        "descricao": "Percy Jackson é um garoto com dislexia e TDAH que, em uma excursão escolar, descobre que é um semideus, filho de Poseidon. Acusado de roubar o raio-mestre de Zeus, ele embarca em uma perigosa missão com seus amigos, Annabeth e Grover, para limpar seu nome e evitar uma guerra entre os deuses do Olimpo."
-    },
-    30: {
-        "imagem": "imagens/robinhoodcomfundo.png",
-        "informacoes": "- <strong>Autor</strong>: Robin Hobb <br> - <strong>Gênero</strong>: Fantasia <br> - <strong>Publicado em</strong>: 1995 <br> - <strong>Editora</strong>: Suma de Letras",
-        "titulo": "O Aprendiz de Assassino",
-        "autor": "Robin Hobb",
-        "valor": "R$ 53,82",
-        "descricao": "Fitz é um bastardo real, desprezado por todos na corte, exceto pelo Rei Sagaz, que o obriga a ser treinado secretamente na arte do assassinato. Enquanto enfrenta sua primeira missão perigosa, Fitz se torna uma peça chave na sobrevivência do reino."
-    },
-    31: {
-        "imagem": "imagens/senhordosaneiscomfundo.png",
-        "informacoes": "- <strong>Autor</strong>: J.R.R. Tolkien <br> - <strong>Género</strong>: Fantasia, Aventura <br> - <strong>Publicado em</strong>: 1954 <br> - <strong>Editora</strong>: HarperCollins",
-        "titulo": "O Senhor dos Anéis",
-        "autor": "J.R.R. Tolkien",
-        "valor": "R$ 160,93",
-        "descricao": "Na Terra Média, durante a Terceira Era, a saga narra a luta entre os povos livres contra Sauron, que procura o Um Anel para dominar toda a Terra Média. A história segue Frodo Baggins, um hobbit que herda o Um Anel e, com a ajuda da Sociedade do Anel, embarca numa jornada para o destruir na Montanha da Perdição."
-    },
-    32: {
-        "imagem": "imagens/silmarillioncomfundo.png",
-        "informacoes": "- <strong>Autor</strong>: J.R.R. Tolkien <br> - <strong>Gênero</strong>: Fantasia, Mitologia, História <br> - <strong>Publicado em</strong>: 1977 <br> - <strong>Editora</strong>: HarperCollins",
-        "titulo": "O Silmarillion",
-        "autor": "J.R.R. Tolkien",
-        "valor": "R$ 44,31",
-        "descricao": "Uma coleção de obras de J.R.R. Tolkien, editada e publicada postumamente por seu filho Christopher Tolkien. O livro narra a história da Terra Média desde sua criação até a Terceira Era, incluindo a gênese do mundo, a ascensão e queda de elfos e homens, e a origem dos Anéis de Poder."
-    },
-    33: {
-        "imagem": "imagens/ultimafestacomfundo.png",
-        "informacoes": "- <strong>Autor</strong>: Lucy Foley <br> - <strong>Gênero</strong>: Thriller, Suspense e Mistério <br> - <strong>Publicado em</strong>: 2019 <br> - <strong>Editora</strong>: Intrínseca",
-        "titulo": "A Última Festa",
-        "autor": "Lucy Foley",
-        "valor": "R$ 47,92",
-        "descricao": "Um grupo de amigos de faculdade se reúne para o Réveillon em um chalé isolado. Uma forte nevasca impede a saída, e no dia seguinte, um deles é encontrado morto. Ninguém pode entrar ou sair, e todos são suspeitos, revelando segredos e tensões antigas."
+async function carregarLivros() {
+    try {
+        const resp = await fetch('livros.json');
+        const data = await resp.json();
+        // Transforma o array em objeto para acesso rápido por id
+        window.livros = {};
+        data.forEach(livro => {
+            window.livros[livro.id] = livro;
+        });
+        // Se quiser, pode chamar funções de renderização aqui
+        // ex: renderizarCatalogo();
+    } catch (e) {
+        console.error('Erro ao carregar livros:', e);
     }
-};
+}
 
 function getLivroIdFromUrl() {
     const params = new URLSearchParams(window.location.search);
     return params.get('id') || '1'; // Padrão para 1 se não houver parâmetro
 }
 
+async function preencherTelaVenda() {
+    await carregarLivros();
+    const id = getLivroIdFromUrl();
+    const livro = window.livros[id];
+    if (livro) {
+        document.getElementById('venda-img').src = livro.imagem;
+        document.getElementById('venda-img').alt = livro.titulo;
+        document.getElementById('venda-img-info').innerHTML = livro.informacoes || '';
+        document.getElementById('venda-titulo').textContent = livro.titulo;
+        document.getElementById('venda-autor').textContent = "por " + livro.autor;
+        document.getElementById('venda-preco').textContent = livro.valor;
+        document.getElementById('venda-descricao').textContent = livro.descricao;
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     if (document.getElementById('venda-img')) {
-        const id = getLivroIdFromUrl();
-        const livro = livros[id];
-        if (livro) {
-            document.getElementById('venda-img').src = livro.imagem;
-            document.getElementById('venda-img').alt = livro.titulo;
-            document.getElementById('venda-img-info').innerHTML = livro.informacoes;
-            document.getElementById('venda-titulo').textContent = livro.titulo;
-            document.getElementById('venda-autor').textContent = "por " + livro.autor;
-            document.getElementById('venda-preco').textContent = livro.valor;
-            document.getElementById('venda-descricao').textContent = livro.descricao;
-        }
+        preencherTelaVenda();
     }
 });
 
@@ -299,4 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+document.addEventListener('DOMContentLoaded', carregarLivros);
 

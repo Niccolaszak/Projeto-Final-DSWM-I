@@ -83,10 +83,18 @@ function removerTodosDoCarrinho(id) {
 window.alterarQuantidade = alterarQuantidade;
 window.removerTodosDoCarrinho = removerTodosDoCarrinho;
 
+document.addEventListener('DOMContentLoaded', async () => {
+    if (!window.livros || Object.keys(window.livros).length === 0) {
+        await carregarLivros();
+    }
+    renderCarrinho(); // ou renderResumoCarrinho()
+});
+
 document.addEventListener('DOMContentLoaded', () => {
-    renderCarrinho();
-    document.getElementById('finalizar-venda').onclick = () => {
-        if (getCarrinho().length === 0) return;
-        window.location.href = "finalizarcompra.html";
-    };
+    const finalizarBtn = document.getElementById('finalizar-venda');
+    if (finalizarBtn) {
+        finalizarBtn.onclick = function() {
+            window.location.href = "finalizarcompra.html";
+        };
+    }
 });

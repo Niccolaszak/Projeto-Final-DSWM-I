@@ -46,6 +46,13 @@ function renderResumoCarrinho() {
     totalDiv.textContent = 'Total: R$ ' + total.toFixed(2).replace('.', ',');
 }
 
+document.addEventListener('DOMContentLoaded', async () => {
+    if (!window.livros || Object.keys(window.livros).length === 0) {
+        await carregarLivros();
+    }
+    renderResumoCarrinho(); // ou renderResumoCarrinho()
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     renderResumoCarrinho();
     document.getElementById('pagamento-form').onsubmit = function(e) {
