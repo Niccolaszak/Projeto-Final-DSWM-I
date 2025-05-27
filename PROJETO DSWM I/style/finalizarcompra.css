@@ -1,0 +1,78 @@
+#resumo-carrinho {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.resumo-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 18px;
+    border-bottom: 1px solid #ececec;
+    padding-bottom: 12px;
+}
+
+.resumo-img {
+    width: 60px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.resumo-titulo {
+    flex: 1;
+    font-size: 1.1em;
+}
+
+.resumo-qtd,
+.resumo-valor {
+    font-size: 1.1em;
+    margin-left: 10px;
+}
+
+#resumo-total {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #e63946;
+    margin-top: 20px;
+}
+
+/* Estilo para o formulário de pagamento */
+#pagamento-form {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.pagamento-label {
+    font-weight: bold;
+}
+
+.pagamento-select {
+    margin: 0 10px 0 10px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+.btn-pagar {
+    background: #1e5372;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 28px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background 0.2s;
+}
+
+.btn-pagar:hover {
+    background: #163d53;
+}
