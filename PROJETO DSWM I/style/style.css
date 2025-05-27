@@ -17,13 +17,9 @@ body {
     flex-direction: column;
     background-image: url('\../imagens/fundodeestante.webp');
     background-size: cover;
-    /* Faz a imagem cobrir toda a área do site */
     background-repeat: no-repeat;
-    /* Evita que a imagem se repita */
     background-attachment: fixed;
-    /* Faz a imagem permanecer fixa ao rolar a página */
     background-position: center;
-    /* Centraliza a imagem */
     font-family: 'Poppins', sans-serif;
 }
 
@@ -41,8 +37,6 @@ a {
     font-weight: 400;
 }
 
-
-/* Contêiner para os pontos */
 body::after {
     content: '';
     position: fixed;
@@ -51,14 +45,12 @@ body::after {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    /* Garante que o efeito não interfira na interação do usuário */
     z-index: -1;
     background-image:
         radial-gradient(circle, rgba(255, 255, 255, 0.2) 2px, transparent 2px),
         radial-gradient(circle, rgba(255, 255, 255, 0.2) 2px, transparent 2px),
         radial-gradient(circle, rgba(255, 255, 255, 0.2) 2px, transparent 2px);
     background-size: 300px 300px;
-    /* Aumenta o espaçamento entre os pontos */
     animation: falling-dots-random 8s linear infinite;
 }
 
@@ -67,7 +59,6 @@ main {
     margin-top: 20px;
 }
 
-/* Animação para os pontos caindo de forma aleatória */
 @keyframes falling-dots-random {
     0% {
         background-position: 0 0, 100px -200px, 200px -400px;
@@ -190,7 +181,6 @@ header {
     box-sizing: border-box;
     text-align: center;
     padding: 0 50px;
-    /* Espaço lateral para as setas */
 }
 
 .livro img {
@@ -207,7 +197,6 @@ button.next {
     padding: 0;
     cursor: pointer;
     z-index: 10;
-    /* Remove qualquer restrição de altura */
     height: 60px;
     width: 40px;
     display: flex;
@@ -224,12 +213,10 @@ button.next img {
 
 button.prev {
     left: 0;
-    /* Cola na lateral esquerda */
 }
 
 button.next {
     right: 0;
-    /* Cola na lateral direita */
 }
 
 .tituloprincipal {
@@ -569,25 +556,6 @@ section h1 {
     
 }
 
-.titulocategorias {
-    text-align: center;
-    font-size: 2em;
-    color: #fff;
-    margin: 10px 0px 0px 0px;
-}
-
-.gradecategorias {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 30px 20px;
-    box-sizing: border-box;
-    margin-top: 40px;
-}
-
-
-
 @media (max-width: 1000px) {
     .carrossel {
         padding: 0 0 0 0;
@@ -667,6 +635,5 @@ section h1 {
 @media (min-width: 801px) {
     main {
         margin-top: 120px;
-        /* altura do header em desktop */
     }
 }

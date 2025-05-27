@@ -73,3 +73,20 @@
     align-self: flex-start;
     width: 100%;
 }
+
+.titulocategorias {
+    text-align: center;
+    font-size: 2em;
+    color: #fff;
+    margin: 10px 0px 0px 0px;
+}
+
+.gradecategorias {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px 20px;
+    box-sizing: border-box;
+    margin-top: 40px;
+}
