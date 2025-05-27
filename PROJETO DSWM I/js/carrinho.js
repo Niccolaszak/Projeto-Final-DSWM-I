@@ -46,7 +46,9 @@ function renderCarrinho() {
                 <span>${quantidade}</span>
                 <button onclick="alterarQuantidade('${id}', 1)">+</button>
             </span>
-            <span style="color:#e63946;font-weight:bold;">${livro.valor}</span>
+            <span style="color:#e63946;font-weight:bold;">
+                R$ ${(preco * quantidade).toFixed(2).replace('.', ',')}
+            </span>
             <button class="carrinho-remover" onclick="removerTodosDoCarrinho('${id}')">Remover</button>
         `;
         li.className = '';
