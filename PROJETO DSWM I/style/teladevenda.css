@@ -100,11 +100,12 @@
     padding: 6px 10px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
     .venda-container {
         flex-direction: column;
         align-items: center;
         padding: 20px 5vw;
+        margin-top: 80px;
     }
 
     .venda-img img {

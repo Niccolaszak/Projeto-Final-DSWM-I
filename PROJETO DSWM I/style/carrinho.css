@@ -110,11 +110,12 @@
     background: #163d53;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     .carrinho-container {
         padding: 10px 2vw;
         max-width: 100vw;
         border-radius: 0;
+        margin-top: 80px;
     }
 
     #lista-carrinho li {
