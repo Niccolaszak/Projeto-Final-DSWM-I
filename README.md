@@ -14,33 +14,10 @@ Este é um projeto de livraria online desenvolvido como trabalho final para a di
 - **Estilização Moderna:** Utilização de CSS moderno, sombras, bordas arredondadas e fontes Google Fonts.
 - **Programação Assíncrona:** O catálogo de livros é carregado dinamicamente via `fetch` de um arquivo JSON.
 
-## Estrutura de Pastas
-
-```
-Projeto-Final-DSWM-I/
-│
-├── imagens/                # Imagens dos livros, ícones e banners
-├── style/                  # Arquivos de estilos CSS
-├── js/                     # Scripts JavaScript
-├── livros.json             # Catálogo de livros em formato JSON
-├── index.html              # Página inicial com carrossel e destaques
-├── livros.html             # Catálogo geral de livros
-├── TelaDeVenda.html        # Página de detalhes do livro
-├── carrinho.html           # Carrinho de compras
-├── finalizarcompra.html    # Página de finalização de compra
-├── livrosFiccao.html       # Página de livros de Ficção
-├── livrosRomance.html      # Página de livros de Romance
-├── livrosAventura.html     # Página de livros de Aventura
-├── livrosFantasia.html     # Página de livros de Fantasia
-├── livrosSuspense.html     # Página de livros de Suspense
-├── livrosTerror.html       # Página de livros de Terror
-└── ...
-```
-
 ## Como Executar
 
 1. **Clone o repositório:**
-   ```bash
+   ```
    git clone https://github.com/Niccolaszak/Projeto-Final-DSWM-I.git
    ```
 2. **Abra a pasta no VS Code ou outro editor.**
@@ -60,9 +37,9 @@ Projeto-Final-DSWM-I/
 ## Nota Importante
 
 > **Recomendação:** Para facilitar a visualização e o desenvolvimento do projeto, recomenda-se utilizar a extensão **Live Server** do Visual Studio Code.  
-> Com ela instalada, basta clicar com o botão direito no arquivo `index.html` e selecionar **"Open with Live Server"** para rodar o site em um servidor local automaticamente, sem precisar digitar comandos no terminal.
+> Com ela instalada, basta clicar com o botão direito no arquivo **index.html** e selecionar **"Open with Live Server"** para rodar o site em um servidor local automaticamente, sem precisar digitar comandos no terminal.
 >
-> Isso garante que o carregamento assíncrono dos livros (`fetch` do `livros.json`) funcione corretamente em todos os navegadores.
+> Isso garante que o carregamento assíncrono dos livros (**fetch** do **livros.json**) funcione corretamente em todos os navegadores.
 
 ## Tecnologias Utilizadas
 
@@ -73,10 +50,10 @@ Projeto-Final-DSWM-I/
 
 ## Observações
 
-- O carrinho utiliza `localStorage` para persistência dos itens enquanto o navegador estiver aberto.
+- O carrinho utiliza **localStorage** para persistência dos itens enquanto o navegador estiver aberto.
 - O site é totalmente estático, não requer backend.
 - Imagens e dados dos livros são fictícios e para fins educacionais.
-- O catálogo de livros é carregado de forma assíncrona via `fetch` do arquivo `livros.json`.
+- O catálogo de livros é carregado de forma assíncrona via **fetch** do arquivo **livros.json**.
 
 ## Desenvolvimento
 
