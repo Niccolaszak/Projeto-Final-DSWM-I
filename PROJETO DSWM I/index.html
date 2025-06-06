@@ -2,15 +2,21 @@
 <html lang="pt-br">
 
 <head>
+    <!-- Define a codificação de caracteres e responsividade -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título da página exibido na aba do navegador -->
     <title>Estante Mágica</title>
+    <!-- Importa a folha de estilos principal -->
     <link rel="stylesheet" href="style/style.css">
+    <!-- Importa fonte do Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Ícone da página (favicon) -->
     <link rel="shortcut icon" href="imagens/iconelivro.webp" type="image/x-icon">
 </head>
 
 <body>
+    <!-- Cabeçalho com logo e menu de navegação -->
     <header class="header">
         <a href="index.html"><img src="imagens/logo2.png" alt="" id="logo"></a>
         <ul>
@@ -18,10 +24,9 @@
             <li><a href="livros.html">Catálogo</a></li>
             <li id="carrinhoicon"><a href="carrinho.html"><img src="imagens/iconcarrinho.png" alt=""></a></li>
         </ul>
-
     </header>
     <main>
-
+        <!-- Seção de livros em destaque com carrossel -->
         <section class="livros-destaque">
             <button class="prev"><img src="imagens/setacarrosselesquerda.png" alt="Seta Esquerda"></button>
             <div class="carrossel">
@@ -34,7 +39,7 @@
             </div>
             <button class="next"><img src="imagens/setacarrosseldireita.png" alt="Seta Direita"></button>
         </section>
-        <!-- Nav bar -->
+        <!-- Barra de navegação de categorias -->
         <section class="categorias navbar">
             <h1>Categorias</h1>
             <nav>
@@ -48,9 +53,11 @@
                 </ul>
             </nav>
         </section>
+        <!-- Título principal dos livros em destaque -->
         <h2 class="tituloprincipal">Confira Nossos Principais Livros</h2>
+        <!-- Seção de exibição dos livros principais -->
         <section class="geral">
-
+            <!-- Livro 1: Harry Potter -->
             <div class="livroexibicao">
                 <div class="imgexibicao">
                     <a href="TelaDeVenda.html?id=1" style="text-decoration: none;">
@@ -74,8 +81,7 @@
                     </p>
                 </div>
             </div>
-
-
+            <!-- Livro 2: O Pequeno Príncipe -->
             <div class="livroexibicao">
                 <div class="info">
                     <h3>O Pequeno Príncipe</h3>
@@ -90,7 +96,6 @@
                         - <strong>Gênero</strong>: Fábula, literatura infantojuvenil<br>
                         - <strong>Publicado em</strong>: 1943<br>
                         -<strong> Editora</strong>: Éditions Gallimard (França), Editora Agir (Brasil)
-
                     </p>
                 </div>
                 <div class="imgexibicao">
@@ -99,7 +104,7 @@
                     </a>
                 </div>
             </div>
-
+            <!-- Livro 3: É Assim que Começa -->
             <div class="livroexibicao">
                 <div class="imgexibicao">
                     <a href="TelaDeVenda.html?id=4" style="text-decoration: none;">
@@ -112,7 +117,6 @@
                         relacionamento abusivo. Agora mãe solteira, ela tenta reconstruir sua vida enquanto lida com a
                         presença de seu ex-marido, Ryle. O reencontro com Atlas Corrigan, seu primeiro amor, traz novas
                         esperanças e desafios, explorando temas de recomeço, superação e amor.
-
                     </p>
                     <hr>
                     <h3>Informações Autorais</h3>
@@ -123,7 +127,7 @@
                     </p>
                 </div>
             </div>
-
+            <!-- Livro 4: It - A Coisa -->
             <div class="livroexibicao">
                 <div class="info">
                     <h3>It - A Coisa</h3>
@@ -139,7 +143,6 @@
                         - <strong>Gênero</strong>: Terror, suspense <br>
                         - <strong>Publicado em</strong>: Setembro de 1986 <br>
                         - <strong>Editora</strong>: Viking Press (EUA), Editora Objetiva (Brasil)
-
                     </p>
                 </div>
                 <div class="imgexibicao">
@@ -148,7 +151,7 @@
                     </a>
                 </div>
             </div>
-
+            <!-- Livro 5: As Crônicas de Nárnia -->
             <div class="livroexibicao">
                 <div class="imgexibicao">
                     <a href="TelaDeVenda.html?id=5" style="text-decoration: none;">
@@ -173,10 +176,10 @@
                 </div>
             </div>
         </section>
-
+        <!-- Botão para ver mais livros -->
         <a href="livros.html" class="botaoVerMais">Ver mais</a>
-
         <br>
+        <!-- Seção final de agradecimento e contato -->
         <section class="final">
             <div class="final-content">
                 <h2>Obrigado por visitar nossa livraria!</h2>
@@ -192,10 +195,10 @@
                 </p>
             </div>
         </section>
-
     </main>
     <br>
     <br>
+    <!-- Rodapé com informações institucionais e redes sociais -->
     <footer class="footer">
         <div class="footer-section">
             <h2 class="tituloRodape">SOBRE</h2>
@@ -220,8 +223,8 @@
             </div>
         </div>
     </footer>
-
 </body>
+<!-- Scripts JS para funcionalidades da página -->
 <script src="js/script.js"></script>
 <script src="js/carrossel.js"></script>
 

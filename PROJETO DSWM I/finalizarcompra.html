@@ -2,17 +2,23 @@
 <html lang="pt-br">
 
 <head>
+    <!-- Define a codificação de caracteres e responsividade -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título da página -->
     <title>Livraria</title>
+    <!-- Importa folhas de estilo para a página -->
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/finalizarcompra.css">
     <link rel="stylesheet" href="style/carrinho.css">
+    <!-- Importa fonte do Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Ícone da página -->
     <link rel="shortcut icon" href="imagens/iconelivro.webp" type="image/x-icon">
 </head>
 
 <body>
+    <!-- Cabeçalho com logo e menu de navegação -->
     <header class="header">
         <a href="index.html"><img src="imagens/logo2.png" alt="" id="logo"></a>
         <ul>
@@ -20,13 +26,16 @@
             <li><a href="livros.html">Catálogo</a></li>
             <li id="carrinhoicon"><a href="carrinho.html"><img src="imagens/iconcarrinho.png" alt=""></a></li>
         </ul>
-
     </header>
     <main>
+        <!-- Seção principal de finalização da compra -->
         <section class="carrinho-container">
             <h2 class="carrinho-titulo">Finalizar Compra</h2>
+            <!-- Lista de itens do carrinho será preenchida via JS -->
             <ul id="resumo-carrinho"></ul>
+            <!-- Exibe o valor total do carrinho -->
             <div id="resumo-total"></div>
+            <!-- Formulário para selecionar forma de pagamento -->
             <form id="pagamento-form">
                 <label for="forma-pagamento" class="pagamento-label">Forma de pagamento:</label>
                 <select id="forma-pagamento" required class="pagamento-select">
@@ -39,6 +48,7 @@
             </form>
         </section>
     </main>
+    <!-- Rodapé com informações institucionais e redes sociais -->
     <footer class="footer">
         <div class="footer-section">
             <h2 class="tituloRodape">SOBRE</h2>
@@ -63,6 +73,7 @@
             </div>
         </div>
     </footer>
+    <!-- Scripts JS para funcionalidades da página -->
     <script src="js/script.js"></script>
     <script src="js/finalizarcompra.js"></script>
 </body>

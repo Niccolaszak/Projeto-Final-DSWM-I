@@ -1,3 +1,4 @@
+/* Container da grade de livros */
 .grade {
     display: flex;
     flex-wrap: wrap;
@@ -10,6 +11,7 @@
     margin-top: 40px;
 }
 
+/* Card de exibição de cada produto/livro */
 .produtoExib {
     flex: 0 1 23%;
     max-width: 250px;
@@ -29,6 +31,7 @@
     overflow: hidden;
 }
 
+/* Imagem do livro no card */
 .produtoExib img {
     width: 200px;
     min-height: 220px;
@@ -37,6 +40,7 @@
     border: solid 1px #3d3d3d;
 }
 
+/* Informações do produto/livro */
 .infoProduto {
     display: flex;
     flex-direction: column;
@@ -47,6 +51,7 @@
     min-height: 0;
 }
 
+/* Título do livro */
 .infoProduto h1 {
     font-size: 18px;
     font-weight: 600;
@@ -57,6 +62,7 @@
     overflow: hidden;
 }
 
+/* Descrição do livro */
 .infoProduto p {
     font-size: 18px;
     color: #555;
@@ -64,6 +70,7 @@
     margin: 0 0 10px 0;
 }
 
+/* Preço do livro */
 #precoProd {
     font-size: 20px;
     font-weight: bold;
@@ -74,6 +81,7 @@
     width: 100%;
 }
 
+/* Título das categorias */
 .titulocategorias {
     text-align: center;
     font-size: 2em;
@@ -81,6 +89,7 @@
     margin: 10px 0px 0px 0px;
 }
 
+/* Grade de categorias */
 .gradecategorias {
     display: flex;
     flex-wrap: wrap;

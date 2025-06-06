@@ -5,13 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Livraria</title>
+    <!-- Importa estilos globais e específicos do carrinho -->
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/carrinho.css">
+    <!-- Fonte Poppins do Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Ícone da página -->
     <link rel="shortcut icon" href="imagens/iconelivro.webp" type="image/x-icon">
 </head>
 
 <body>
+    <!-- Cabeçalho fixo com logo e navegação -->
     <header class="header">
         <a href="index.html"><img src="imagens/logo2.png" alt="" id="logo"></a>
         <ul>
@@ -19,19 +23,25 @@
             <li><a href="livros.html">Catálogo</a></li>
             <li id="carrinhoicon"><a href="carrinho.html"><img src="imagens/iconcarrinho.png" alt=""></a></li>
         </ul>
-
     </header>
     <main>
+        <!-- Seção principal do carrinho -->
         <section class="carrinho-container">
             <h2 class="carrinho-titulo">Seu Carrinho</h2>
+            <!-- Lista de itens do carrinho (preenchida via JS) -->
             <ul id="lista-carrinho"></ul>
+            <!-- Valor total do carrinho -->
             <div id="carrinho-total"></div>
+            <!-- Mensagem de carrinho vazio -->
             <div id="carrinho-vazio">Seu carrinho está vazio.</div>
+            <!-- Botão para finalizar a venda -->
             <button id="finalizar-venda">Finalizar Venda</button>
         </section>
     </main>
+    <!-- Scripts para funcionamento do carrinho -->
     <script src="js/script.js"></script>
     <script src="js/carrinho.js"></script>
+    <!-- Rodapé com informações e links -->
     <footer class="footer">
         <div class="footer-section">
             <h2 class="tituloRodape">SOBRE</h2>
