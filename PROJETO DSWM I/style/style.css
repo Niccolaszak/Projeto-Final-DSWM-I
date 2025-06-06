@@ -53,9 +53,9 @@ body::after {
     pointer-events: none;
     z-index: -1;
     background-image:
-        radial-gradient(circle, rgba(255, 255, 255, 0.2) 2px, transparent 2px),
-        radial-gradient(circle, rgba(255, 255, 255, 0.2) 2px, transparent 2px),
-        radial-gradient(circle, rgba(255, 255, 255, 0.2) 2px, transparent 2px);
+        radial-gradient(circle, rgba(255, 255, 255, 0.4) 2px, transparent 2px),
+        radial-gradient(circle, rgba(255, 255, 255, 0.4) 2px, transparent 2px),
+        radial-gradient(circle, rgba(255, 255, 255, 0.4) 2px, transparent 2px);
     background-size: 300px 300px;
     animation: falling-dots-random 8s linear infinite;
 }
