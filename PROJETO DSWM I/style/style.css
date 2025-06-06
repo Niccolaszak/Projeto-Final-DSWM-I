@@ -610,7 +610,7 @@ section h1 {
 }
 
 /* Responsividade do carrossel e imagens para telas menores */
-@media (max-width: 1000px) {
+@media (max-width: 1150px) {
     .carrossel {
         padding: 0 0 0 0;
         min-width: 0;
