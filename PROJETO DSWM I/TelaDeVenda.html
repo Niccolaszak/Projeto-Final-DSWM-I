@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Livraria</title>
+    <!-- Estilos principais e específicos da tela de venda -->
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/teladevenda.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -12,6 +13,7 @@
 </head>
 
 <body>
+    <!-- Cabeçalho com logo e navegação -->
     <header class="header">
         <a href="index.html"><img src="imagens/logo2.png" alt="" id="logo"></a>
         <ul>
@@ -19,14 +21,16 @@
             <li><a href="livros.html">Catálogo</a></li>
             <li id="carrinhoicon"><a href="carrinho.html"><img src="imagens/iconcarrinho.png" alt=""></a></li>
         </ul>
-
     </header>
     <main>
+        <!-- Container principal da tela de venda -->
         <section class="venda-container">
+            <!-- Imagem e informações adicionais do livro -->
             <div class="venda-img">
                 <img id="venda-img" src="" alt="Produto" />
                 <p class="venda-img-info" id="venda-img-info"></p>
             </div>
+            <!-- Informações detalhadas do livro -->
             <div class="venda-info">
                 <h2 class="venda-titulo" id="venda-titulo"></h2>
                 <p class="venda-autor" id="venda-autor"></p>
@@ -36,6 +40,7 @@
             </div>
         </section>
     </main>
+    <!-- Rodapé com informações institucionais e redes sociais -->
     <footer class="footer">
         <div class="footer-section">
             <h2 class="tituloRodape">SOBRE</h2>
@@ -60,6 +65,7 @@
             </div>
         </div>
     </footer>
+    <!-- Script responsável por preencher as informações do livro e adicionar ao carrinho -->
     <script src="js/script.js"></script>
 </body>
 

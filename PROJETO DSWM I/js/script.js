@@ -1,5 +1,7 @@
+// Objeto global para armazenar os livros carregados
 window.livros = {};
 
+// Função assíncrona para carregar os livros do arquivo livros.json
 async function carregarLivros() {
     try {
         const resp = await fetch('livros.json');
@@ -16,11 +18,13 @@ async function carregarLivros() {
     }
 }
 
+// Recupera o id do livro a partir da URL (usado na tela de venda)
 function getLivroIdFromUrl() {
     const params = new URLSearchParams(window.location.search);
     return params.get('id') || '1'; // Padrão para 1 se não houver parâmetro
 }
 
+// Preenche a tela de venda com as informações do livro selecionado
 async function preencherTelaVenda() {
     await carregarLivros();
     const id = getLivroIdFromUrl();
@@ -36,12 +40,14 @@ async function preencherTelaVenda() {
     }
 }
 
+// Ao carregar a página, se estiver na tela de venda, preenche as informações do livro
 document.addEventListener('DOMContentLoaded', () => {
     if (document.getElementById('venda-img')) {
         preencherTelaVenda();
     }
 });
 
+// Evento para o botão "Adicionar ao carrinho" na tela de venda
 document.addEventListener('DOMContentLoaded', () => {
     const addBtn = document.querySelector('.botao-add');
     if (addBtn) {
@@ -55,4 +61,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+// Garante que os livros sejam carregados ao iniciar o site
 document.addEventListener('DOMContentLoaded', carregarLivros);

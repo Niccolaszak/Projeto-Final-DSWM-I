@@ -1,33 +1,20 @@
 .venda-container {
-    display: flex;
-    /* Layout flexível */
-    flex-wrap: wrap;
-    /* Quebra linha se necessário */
-    gap: 40px;
-    /* Espaço entre imagem e informações */
-    background: #fff;
-    /* Fundo branco */
-    border-radius: 16px;
-    /* Bordas arredondadas */
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-    /* Sombra suave */
-    max-width: 900px;
-    /* Largura máxima */
-    margin: 0px auto 70px auto;
-    /* Centraliza e espaça embaixo */
-    padding: 40px 30px;
-    /* Espaçamento interno */
-    align-items: flex-start;
-    /* Alinha itens ao topo */
-    border: solid 2px #292a35;
-    /* Borda escura */
-    box-shadow: 0 2px 8px rgba(0, 1, 1, 8);
-    /* Sombra adicional */
+    display: flex;                /* Layout flexível lado a lado */
+    flex-wrap: wrap;              /* Permite quebra de linha em telas pequenas */
+    gap: 40px;                    /* Espaço entre imagem e informações */
+    background: #fff;             /* Fundo branco */
+    border-radius: 16px;          /* Bordas arredondadas */
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08); /* Sombra suave */
+    max-width: 900px;             /* Largura máxima do container */
+    margin: 0px auto 70px auto;   /* Centraliza e espaça embaixo */
+    padding: 40px 30px;           /* Espaçamento interno */
+    align-items: flex-start;      /* Alinha itens ao topo */
+    border: solid 2px #292a35;    /* Borda escura */
+    box-shadow: 0 2px 8px rgba(0, 1, 1, 8); /* Sombra adicional */
 }
 
 .venda-img {
-    flex: 1 1 280px;
-    /* Flexível, largura mínima 280px */
+    flex: 1 1 280px;              /* Flexível, largura mínima 280px */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -38,23 +25,17 @@
 .venda-img img {
     width: 260px;
     height: 340px;
-    object-fit: cover;
-    /* Mantém proporção */
+    object-fit: cover;            /* Mantém proporção da imagem */
     border-radius: 12px;
-    /* Bordas arredondadas */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
-    /* Sombra */
     background: #f2efff;
-    /* Fundo claro */
 }
 
 .venda-info {
-    flex: 2 1 350px;
-    /* Flexível, largura mínima 350px */
+    flex: 2 1 350px;              /* Flexível, largura mínima 350px */
     display: flex;
     flex-direction: column;
-    gap: 18px;
-    /* Espaço entre informações */
+    gap: 18px;                    /* Espaço entre informações */
     min-width: 250px;
 }
 
@@ -102,6 +83,7 @@
     background: #0f2a3a;
 }
 
+/* Informações de parcelamento e frete */
 .venda-parcela,
 .venda-frete {
     font-size: 1em;
@@ -109,6 +91,7 @@
     margin: 0;
 }
 
+/* Informações adicionais da imagem (ex: selo, destaque) */
 .venda-img-info {
     margin-top: 12px;
     font-size: 1em;
@@ -119,10 +102,10 @@
     padding: 6px 10px;
 }
 
+/* Responsividade para telas menores */
 @media (max-width: 800px) {
     .venda-container {
-        flex-direction: column;
-        /* Empilha elementos */
+        flex-direction: column;   /* Empilha elementos verticalmente */
         align-items: center;
         padding: 20px 5vw;
         margin-top: 80px;

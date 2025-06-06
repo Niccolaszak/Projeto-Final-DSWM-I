@@ -1,11 +1,14 @@
+// Recupera o carrinho do localStorage (array de IDs dos livros)
 function getCarrinho() {
     return JSON.parse(localStorage.getItem('carrinho')) || [];
 }
 
+// Salva o carrinho no localStorage
 function setCarrinho(carrinho) {
     localStorage.setItem('carrinho', JSON.stringify(carrinho));
 }
 
+// Agrupa os itens do carrinho por ID, contando quantos de cada livro existem
 function agruparCarrinho(carrinho) {
     return carrinho.reduce((acc, id) => {
         acc[id] = (acc[id] || 0) + 1;
@@ -13,6 +16,7 @@ function agruparCarrinho(carrinho) {
     }, {});
 }
 
+// Renderiza o resumo do carrinho na tela de finalização
 function renderResumoCarrinho() {
     const livros = window.livros || {};
     const carrinho = getCarrinho();
@@ -20,19 +24,25 @@ function renderResumoCarrinho() {
     const totalDiv = document.getElementById('resumo-total');
     lista.innerHTML = '';
     let total = 0;
+
+    // Se o carrinho estiver vazio, mostra mensagem e esconde o formulário de pagamento
     if (carrinho.length === 0) {
         lista.innerHTML = '<li>Seu carrinho está vazio.</li>';
         totalDiv.textContent = '';
         document.getElementById('pagamento-form').style.display = 'none';
         return;
     }
+
+    // Agrupa os itens para mostrar quantidade de cada livro
     const agrupado = agruparCarrinho(carrinho);
     Object.keys(agrupado).forEach(id => {
         const livro = livros[id];
         if (!livro) return;
         const quantidade = agrupado[id];
+        // Converte o valor do livro para número
         const preco = Number(livro.valor.replace(/[^\d,]/g, '').replace(',', '.'));
         total += preco * quantidade;
+        // Cria o elemento visual do item no resumo
         const li = document.createElement('li');
         li.className = 'resumo-item';
         li.innerHTML = `
@@ -43,16 +53,19 @@ function renderResumoCarrinho() {
         `;
         lista.appendChild(li);
     });
+    // Mostra o valor total do carrinho
     totalDiv.textContent = 'Total: R$ ' + total.toFixed(2).replace('.', ',');
 }
 
+// Garante que os livros estejam carregados antes de renderizar o resumo do carrinho
 document.addEventListener('DOMContentLoaded', async () => {
     if (!window.livros || Object.keys(window.livros).length === 0) {
         await carregarLivros();
     }
-    renderResumoCarrinho(); // ou renderResumoCarrinho()
+    renderResumoCarrinho();
 });
 
+// Adiciona evento ao formulário de pagamento para finalizar a compra
 document.addEventListener('DOMContentLoaded', () => {
     renderResumoCarrinho();
     document.getElementById('pagamento-form').onsubmit = function(e) {
@@ -62,8 +75,8 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Selecione a forma de pagamento!');
             return;
         }
-        setCarrinho([]);
+        setCarrinho([]); // Limpa o carrinho após a compra
         alert('Compra realizada com sucesso! Obrigado pela preferência.');
-        window.location.href = "index.html";
+        window.location.href = "index.html"; // Redireciona para a página inicial
     };
 });
